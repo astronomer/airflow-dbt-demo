@@ -59,7 +59,6 @@ def make_dbt_task(node, dbt_verb):
                 cd {DBT_DIR} &&
                 dbt {GLOBAL_CLI_FLAGS} {dbt_verb} --target prod --models {model}
                 """,
-                pool="dbt_pool",
             )
         elif dbt_verb == "test":
             node_test = node.replace("model", "test")
@@ -70,7 +69,6 @@ def make_dbt_task(node, dbt_verb):
                 cd {DBT_DIR} &&
                 dbt {GLOBAL_CLI_FLAGS} {dbt_verb} --target prod --models {model}
                 """,
-                pool="dbt_pool",
             )
     return dbt_task
 
