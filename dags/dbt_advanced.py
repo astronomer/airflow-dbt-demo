@@ -5,6 +5,7 @@ from airflow.operators.bash_operator import BashOperator
 from airflow.utils.dates import days_ago
 from airflow.utils.dates import timedelta
 from airflow.utils.task_group import TaskGroup
+
 default_args = {
     'owner': 'astronomer',
     'depends_on_past': False,
@@ -15,6 +16,7 @@ default_args = {
     'retries': 1,
     'retry_delay': timedelta(minutes=5)
 }
+
 dag = DAG(
     'dbt_advanced_dag',
     default_args=default_args,
@@ -27,6 +29,7 @@ def load_manifest():
     with open(local_filepath) as f:
         data = json.load(f)
     return data
+
 def make_dbt_task(node, dbt_verb):
     """Returns an Airflow operator either run and test an individual model"""
     DBT_DIR = "/usr/local/airflow/dags/dbt"
@@ -52,13 +55,17 @@ def make_dbt_task(node, dbt_verb):
             dag=dag,
         )
     return dbt_task
+
 data = load_manifest()
+
 dbt_tasks = {}
+
 for node in data["nodes"].keys():
     if node.split(".")[0] == "model":
         node_test = node.replace("model", "test")
         dbt_tasks[node] = make_dbt_task(node, "run")
         dbt_tasks[node_test] = make_dbt_task(node, "test")
+
 for node in data["nodes"].keys():
     if node.split(".")[0] == "model":
         # Set dependency to run tests on a model after model runs finishes
