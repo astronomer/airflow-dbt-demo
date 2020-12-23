@@ -9,7 +9,7 @@ from airflow.utils.task_group import TaskGroup
 default_args = {
     'owner': 'astronomer',
     'depends_on_past': False,
-    'start_date': days_ago(2),
+    'start_date': datetime(2020, 12, 23),
     'email': ['noreply@astronomer.io'],
     'email_on_failure': False,
     'email_on_retry': False,
