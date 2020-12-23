@@ -3,7 +3,7 @@ import json
 from airflow import DAG
 from airflow.operators.bash_operator import BashOperator
 from airflow.operators.dummy_operator import DummyOperator
-from airflow.utils.dates import days_ago
+from airflow.utils.dates import datetime
 from airflow.utils.dates import timedelta
 from airflow.utils.task_group import TaskGroup
 
