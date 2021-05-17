@@ -1,6 +1,6 @@
 # Airflow DAGs for dbt
 
-> The code in this repository is meant to accompany [this blog post](https://astronomer.io/blog) on beginner and advanced implementation concepts at the intersection of dbt and Airflow.
+> The code in this repository is meant to accompany [this blog post](https://astronomer.io/blog/airflow-dbt-1) on beginner and advanced implementation concepts at the intersection of dbt and Airflow.
 
 To run these DAGs locally:
 1. Download the [Astro CLI](https://github.com/astronomer/astro-cli)
