@@ -22,6 +22,7 @@ dag = DAG(
     default_args=default_args,
     description='A dbt wrapper for airflow',
     schedule_interval=timedelta(days=1),
+    catchup=False,
 )
 
 def load_manifest():

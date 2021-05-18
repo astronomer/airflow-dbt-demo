@@ -8,35 +8,39 @@ from airflow.utils.dates import timedelta
 from airflow.utils.task_group import TaskGroup
 
 default_args = {
-    'owner': 'astronomer',
-    'depends_on_past': False,
-    'start_date': datetime(2020, 12, 23),
-    'email': ['noreply@astronomer.io'],
-    'email_on_failure': False,
-    'email_on_retry': False,
-    'retries': 1,
-    'retry_delay': timedelta(minutes=5)
+    "owner": "astronomer",
+    "depends_on_past": False,
+    "start_date": datetime(2020, 12, 23),
+    "email": ["noreply@astronomer.io"],
+    "email_on_failure": False,
+    "email_on_retry": False,
+    "retries": 1,
+    "retry_delay": timedelta(minutes=5),
 }
 
 dag = DAG(
-    'elt_dag',
+    "elt_dag",
     default_args=default_args,
-    description='A mock ELT pipeline that mocks implementation for singer taps, targets, and dbt.',
+    description="A mock ELT pipeline that mocks implementation for singer taps, targets, and dbt.",
     schedule_interval=timedelta(days=1),
+    catchup=False,
 )
 
 with dag:
     run_jobs = TaskGroup("dbt_run")
-    test_jobs = TaskGroup('dbt_test')
+    test_jobs = TaskGroup("dbt_test")
 
-start = DummyOperator(task_id='start', dag=dag)
+start = DummyOperator(task_id="start", dag=dag)
 # Github Singer Tap for data extract. Note that this is a mocked help command at the moment.
-extract = BashOperator(task_id='singer_tap_extract', bash_command="tap-github -h", dag=dag)
+extract = BashOperator(
+    task_id="singer_tap_extract", bash_command="tap-github -h", dag=dag
+)
 # CSV Singer Target for data loading. Note that this is a mocked help command at the moment.
-load = BashOperator(task_id='singer_target_load', bash_command="target-csv -h", dag=dag)
-end = DummyOperator(task_id='end', dag=dag)
+load = BashOperator(task_id="singer_target_load", bash_command="target-csv -h", dag=dag)
+end = DummyOperator(task_id="end", dag=dag)
 
 start >> extract >> load
+
 
 def load_manifest():
     local_filepath = "/usr/local/airflow/dags/dbt/target/manifest.json"
@@ -50,6 +54,7 @@ def make_dbt_task(node, dbt_verb):
     DBT_DIR = "/usr/local/airflow/dags/dbt"
     GLOBAL_CLI_FLAGS = "--no-write-json"
     model = node.split(".")[-1]
+
     with dag:
         if dbt_verb == "run":
             dbt_task = BashOperator(
