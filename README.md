@@ -9,6 +9,8 @@
 2. Download and run [Docker](https://docs.docker.com/docker-for-mac/install/)
 3. Clone this repository and `cd` into it.
 4. Run `astro dev start` to spin up a local Airflow environment and run the accompanying DAGs on your machine.
+5. **Run the `dbt_basic` DAG first** as this contains a `dbt seed` command that loads sample data into the database. You can then
+run the other two DAGs any time after without having to load the data again.
 
 ## dbt project setup
 
