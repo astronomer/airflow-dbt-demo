@@ -6,42 +6,41 @@ from airflow.utils.dates import datetime
 from airflow.utils.dates import timedelta
 from airflow.utils.task_group import TaskGroup
 
+DBT_PROJECT_DIR = '/usr/local/airflow/dbt'
+
 default_args = {
     'owner': 'astronomer',
     'depends_on_past': False,
     'start_date': datetime(2020, 12, 23),
     'email': ['noreply@astronomer.io'],
-    'email_on_failure': False,
-    'email_on_retry': False,
-    'retries': 1,
-    'retry_delay': timedelta(minutes=5)
+    'email_on_failure': False
 }
 
 dag = DAG(
     'dbt_advanced_dag',
     default_args=default_args,
     description='A dbt wrapper for airflow',
-    schedule_interval=timedelta(days=1),
-    catchup=False,
+    schedule_interval=None,
 )
 
+
 def load_manifest():
-    local_filepath = "/usr/local/airflow/dags/dbt/target/manifest.json"
+    local_filepath = f"{DBT_PROJECT_DIR}/target/manifest.json"
     with open(local_filepath) as f:
         data = json.load(f)
     return data
 
+
 def make_dbt_task(node, dbt_verb):
     """Returns an Airflow operator either run and test an individual model"""
-    DBT_DIR = "/usr/local/airflow/dags/dbt"
     GLOBAL_CLI_FLAGS = "--no-write-json"
     model = node.split(".")[-1]
     if dbt_verb == "run":
         dbt_task = BashOperator(
             task_id=node,
             bash_command=f"""
-            cd {DBT_DIR} &&
-            dbt {GLOBAL_CLI_FLAGS} {dbt_verb} --target prod --models {model}
+            dbt {GLOBAL_CLI_FLAGS} {dbt_verb} --target dev --models {model} \
+            --profiles-dir {DBT_PROJECT_DIR} --project-dir {DBT_PROJECT_DIR} 
             """,
             dag=dag,
         )
@@ -50,12 +49,13 @@ def make_dbt_task(node, dbt_verb):
         dbt_task = BashOperator(
             task_id=node_test,
             bash_command=f"""
-            cd {DBT_DIR} &&
-            dbt {GLOBAL_CLI_FLAGS} {dbt_verb} --target prod --models {model}
+            dbt {GLOBAL_CLI_FLAGS} {dbt_verb} --target dev --models {model} \
+            --profiles-dir {DBT_PROJECT_DIR} --project-dir {DBT_PROJECT_DIR} 
             """,
             dag=dag,
         )
     return dbt_task
+
 
 data = load_manifest()
 

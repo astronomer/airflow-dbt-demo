@@ -7,23 +7,21 @@ from airflow.utils.dates import datetime
 from airflow.utils.dates import timedelta
 from airflow.utils.task_group import TaskGroup
 
+DBT_PROJECT_DIR = '/usr/local/airflow/dbt'
+
 default_args = {
     "owner": "astronomer",
     "depends_on_past": False,
     "start_date": datetime(2020, 12, 23),
     "email": ["noreply@astronomer.io"],
-    "email_on_failure": False,
-    "email_on_retry": False,
-    "retries": 1,
-    "retry_delay": timedelta(minutes=5),
+    "email_on_failure": False
 }
 
 dag = DAG(
     "elt_dag",
     default_args=default_args,
     description="A mock ELT pipeline that mocks implementation for singer taps, targets, and dbt.",
-    schedule_interval=timedelta(days=1),
-    catchup=False,
+    schedule_interval=None,
 )
 
 with dag:
@@ -43,7 +41,7 @@ start >> extract >> load
 
 
 def load_manifest():
-    local_filepath = "/usr/local/airflow/dags/dbt/target/manifest.json"
+    local_filepath = f"{DBT_PROJECT_DIR}/target/manifest.json"
     with open(local_filepath) as f:
         data = json.load(f)
     return data
@@ -51,7 +49,6 @@ def load_manifest():
 
 def make_dbt_task(node, dbt_verb):
     """Returns an Airflow operator to run or test an individual model"""
-    DBT_DIR = "/usr/local/airflow/dags/dbt"
     GLOBAL_CLI_FLAGS = "--no-write-json"
     model = node.split(".")[-1]
 
@@ -61,8 +58,8 @@ def make_dbt_task(node, dbt_verb):
                 task_id=node,
                 task_group=run_jobs,
                 bash_command=f"""
-                cd {DBT_DIR} &&
-                dbt {GLOBAL_CLI_FLAGS} {dbt_verb} --target prod --models {model}
+                dbt {GLOBAL_CLI_FLAGS} {dbt_verb} --target dev --models {model} \
+                --profiles-dir {DBT_PROJECT_DIR} --project-dir {DBT_PROJECT_DIR} 
                 """,
             )
         elif dbt_verb == "test":
@@ -71,8 +68,8 @@ def make_dbt_task(node, dbt_verb):
                 task_id=node_test,
                 task_group=test_jobs,
                 bash_command=f"""
-                cd {DBT_DIR} &&
-                dbt {GLOBAL_CLI_FLAGS} {dbt_verb} --target prod --models {model}
+                dbt {GLOBAL_CLI_FLAGS} {dbt_verb} --target dev --models {model} \
+                --profiles-dir {DBT_PROJECT_DIR} --project-dir {DBT_PROJECT_DIR} 
                 """,
             )
     return dbt_task
