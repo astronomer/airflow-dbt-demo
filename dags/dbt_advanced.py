@@ -57,8 +57,13 @@ def make_dbt_task(node, dbt_verb):
     return dbt_task
 
 
-data = load_manifest()
+dbt_seed = BashOperator(
+    task_id="dbt_seed",
+    bash_command=f"dbt seed --profiles-dir {DBT_PROJECT_DIR} --project-dir {DBT_PROJECT_DIR}",
+    dag=dag
+)
 
+data = load_manifest()
 dbt_tasks = {}
 
 for node in data["nodes"].keys():
@@ -76,4 +81,4 @@ for node in data["nodes"].keys():
         for upstream_node in data["nodes"][node]["depends_on"]["nodes"]:
             upstream_node_type = upstream_node.split(".")[0]
             if upstream_node_type == "model":
-                dbt_tasks[upstream_node] >> dbt_tasks[node]
+                dbt_seed >> dbt_tasks[upstream_node] >> dbt_tasks[node]

@@ -9,8 +9,6 @@
 2. Download and run [Docker](https://docs.docker.com/docker-for-mac/install/)
 3. Clone this repository and `cd` into it.
 4. Run `astro dev start` to spin up a local Airflow environment and run the accompanying DAGs on your machine.
-5. **Run the `dbt_basic` DAG first** as this contains a `dbt seed` command that loads sample data into the database. You can then
-run the other two DAGs any time after without having to load the data again.
 
 ## dbt project setup
 
@@ -19,7 +17,10 @@ The only files required for the Airflow DAGs to run are `dbt_project.yml`, `prof
 `target/manifest.json`, but we included the models for completeness. If you would like to try these DAGs with 
 your own dbt workflow, feel free to drop in your own project files.
 
-**Note** that the sample dbt project contains the `profiles.yml`, which is configured to use Astronomer's 
+**Notes** 
+- The sample dbt project contains the `profiles.yml`, which is configured to use Astronomer's 
 containerized postgres database **solely for the purpose of this demo**. In a production environment, you should use a 
 production-ready database and use environment variables or some other form of secret management for the database 
 credentials.
+- Each DAG runs a `dbt_seed` task at the beginning that loads sample data into the database. This is simply for the
+purpose of this demo.
