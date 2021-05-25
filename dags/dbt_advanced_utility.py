@@ -33,7 +33,6 @@ with dag:
         task_id='dbt_seed',
         bash_command=f'dbt {DBT_GLOBAL_CLI_FLAGS} seed --profiles-dir {DBT_PROJECT_DIR} --project-dir {DBT_PROJECT_DIR}'
     )
-    dbt_compile = DummyOperator(task_id='dbt_compile')
     end_dummy = DummyOperator(task_id='end')
 
     dag_parser = DbtDagParser(dag=dag,
@@ -45,4 +44,4 @@ with dag:
     dbt_run_group = dag_parser.get_dbt_run_group()
     dbt_test_group = dag_parser.get_dbt_test_group()
 
-    start_dummy >> dbt_seed >> dbt_compile >> dbt_run_group >> dbt_test_group >> end_dummy
+    start_dummy >> dbt_seed >> dbt_run_group >> dbt_test_group >> end_dummy
