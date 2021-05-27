@@ -3,4 +3,5 @@
 airflow_settings.yaml
 .DS_Store
 .idea*
-**/__pycache__/**
+*.pyc
+*/__pycache__/*
