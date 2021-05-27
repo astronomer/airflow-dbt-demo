@@ -1,5 +1,7 @@
 .git
 .env
 airflow_settings.yaml
+.DS_Store
+.idea*
 *.pyc
 */__pycache__/*
