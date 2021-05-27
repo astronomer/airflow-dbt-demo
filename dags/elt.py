@@ -22,6 +22,7 @@ dag = DAG(
     default_args=default_args,
     description="A mock ELT pipeline that mocks implementation for singer taps, targets, and dbt.",
     schedule_interval=None,
+    catchup=False,
 )
 
 with dag:

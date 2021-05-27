@@ -21,6 +21,7 @@ dag = DAG(
     default_args=default_args,
     description="A sample Airflow DAG to invoke dbt runs using a BashOperator",
     schedule_interval=None,
+    catchup=False,
 )
 
 with dag:
