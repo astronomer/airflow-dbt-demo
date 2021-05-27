@@ -10,3 +10,4 @@ jaffle_shop:
       dbname: postgres
       schema: public
   target: dev
+  
