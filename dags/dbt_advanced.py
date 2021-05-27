@@ -57,6 +57,8 @@ def make_dbt_task(node, dbt_verb):
     return dbt_task
 
 
+# This task loads the CSV files from dbt/data into the local postgres database for the purpose of this demo.
+# In practice, we'd usually expect the data to have already been loaded to the database.
 dbt_seed = BashOperator(
     task_id="dbt_seed",
     bash_command=f"dbt seed --profiles-dir {DBT_PROJECT_DIR} --project-dir {DBT_PROJECT_DIR}",
