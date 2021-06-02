@@ -5,6 +5,8 @@ from airflow.utils.dates import datetime
 from airflow.utils.task_group import TaskGroup
 from include.dbt_dag_parser import DbtDagParser
 
+# We're hardcoding these values here for the purpose of the demo, but in a production environment these
+# would probably come from a config file and/or environment variables!
 DBT_PROJECT_DIR = '/usr/local/airflow/dbt'
 DBT_GLOBAL_CLI_FLAGS = '--no-write-json'
 DBT_TARGET = 'dev'
@@ -23,6 +25,7 @@ dag = DAG(
     default_args=default_args,
     description='A dbt wrapper for Airflow using a utility class to map the dbt DAG to Airflow tasks',
     schedule_interval=None,
+    catchup=False
 )
 
 with dag:
@@ -35,6 +38,8 @@ with dag:
     )
     end_dummy = DummyOperator(task_id='end')
 
+    # The parser parses out a dbt manifest.json file and dynamically creates tasks for "dbt run" and "dbt test"
+    # commands for each individual model. It groups them into task groups which we can retrieve and use in the DAG.
     dag_parser = DbtDagParser(dag=dag,
                               dbt_global_cli_flags=DBT_GLOBAL_CLI_FLAGS,
                               dbt_project_dir=DBT_PROJECT_DIR,
