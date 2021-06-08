@@ -41,20 +41,8 @@ class DbtDagParser:
         self.dbt_run_group = TaskGroup(dbt_run_group_name)
         self.dbt_test_group = TaskGroup(dbt_test_group_name)
 
-        # Compile the manifest, then parse it and populate the two task groups
-        self.compile_dbt()
+        # Parse the manifest and populate the two task groups
         self.make_dbt_task_groups()
-
-    def compile_dbt(self):
-        """
-        Calls dbt compile in a subprocess to ensure the manifest is up-to-date.
-
-        Returns: None
-
-        """
-        compile_command = f'dbt compile --project-dir {self.dbt_project_dir}'.split(' ')
-        logging.info('Compiling dbt project: %s', compile_command)
-        subprocess.run(compile_command)
 
     def load_dbt_manifest(self):
         """
