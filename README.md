@@ -20,8 +20,8 @@ your own dbt workflow, feel free to drop in your own project files.
 
 **Notes** 
 - If you make changes to the dbt project, you will need to run `dbt compile` in order to update the `manifest.json` file. 
-This may be done as part of a CI/CD pipeline, or as a separate step in a production pipeline run *before* the
-Airflow DAG is triggered.
+This may be done manually during development, as part of a CI/CD pipeline, or as a separate step in a production pipeline 
+run *before* the Airflow DAG is triggered.
 - The sample dbt project contains the `profiles.yml`, which is configured to use Astronomer's 
 containerized postgres database **solely for the purpose of this demo**. In a production environment, you should use a 
 production-ready database and use environment variables or some other form of secret management for the database 
