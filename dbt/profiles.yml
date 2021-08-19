@@ -1,13 +1,13 @@
 jaffle_shop:
   outputs:
     dev:
-      type: postgres
+      type: "{{ env_var('DBW_TYPE', 'postgres') }}"
       threads: 1
-      host: postgres
-      port: 5432
-      user: postgres
-      pass: postgres
-      dbname: postgres
-      schema: public
+      host: "{{ env_var('DBW_HOST', 'postgres') }}"
+      port: "{{ env_var('DBW_PORT', 5432) }}"
+      user: "{{ env_var('DBW_USER', 'postgres') }}"
+      pass: "{{ env_var('DBW_PASS', 'postgres') }}"
+      dbname: "{{ env_var('DBW_DBNAME', 'postgres') }}"
+      schema: "{{ env_var('DBW_SCHEMA', 'public') }}"
   target: dev
   
