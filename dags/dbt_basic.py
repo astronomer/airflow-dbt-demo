@@ -8,19 +8,11 @@ from airflow.utils.dates import timedelta
 # would probably come from a config file and/or environment variables!
 DBT_PROJECT_DIR = '/usr/local/airflow/dbt'
 
-# These args will get passed on to each operator
-# You can override them on a per-task basis during operator initialization
-default_args = {
-    "owner": "astronomer",
-    "depends_on_past": False,
-    "start_date": datetime(2020, 12, 23),
-    "email": ["noreply@astronomer.io"],
-    "email_on_failure": False
-}
 
 dag = DAG(
     "dbt_basic_dag",
-    default_args=default_args,
+    start_date=datetime(2020, 12, 23),
+    default_args={"owner": "astronomer", "email_on_failure": False},
     description="A sample Airflow DAG to invoke dbt runs using a BashOperator",
     schedule_interval=None,
     catchup=False,

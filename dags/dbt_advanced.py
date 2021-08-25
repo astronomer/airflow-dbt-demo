@@ -10,17 +10,11 @@ from airflow.utils.task_group import TaskGroup
 # would probably come from a config file and/or environment variables!
 DBT_PROJECT_DIR = '/usr/local/airflow/dbt'
 
-default_args = {
-    'owner': 'astronomer',
-    'depends_on_past': False,
-    'start_date': datetime(2020, 12, 23),
-    'email': ['noreply@astronomer.io'],
-    'email_on_failure': False
-}
 
 dag = DAG(
     'dbt_advanced_dag',
-    default_args=default_args,
+    start_date=datetime(2020, 12, 23),
+    default_args={"owner": "astronomer", "email_on_failure": False},
     description='A dbt wrapper for airflow',
     schedule_interval=None,
     catchup=False,
@@ -43,7 +37,7 @@ def make_dbt_task(node, dbt_verb):
             task_id=node,
             bash_command=f"""
             dbt {GLOBAL_CLI_FLAGS} {dbt_verb} --target dev --models {model} \
-            --profiles-dir {DBT_PROJECT_DIR} --project-dir {DBT_PROJECT_DIR} 
+            --profiles-dir {DBT_PROJECT_DIR} --project-dir {DBT_PROJECT_DIR}
             """,
             dag=dag,
         )
@@ -53,7 +47,7 @@ def make_dbt_task(node, dbt_verb):
             task_id=node_test,
             bash_command=f"""
             dbt {GLOBAL_CLI_FLAGS} {dbt_verb} --target dev --models {model} \
-            --profiles-dir {DBT_PROJECT_DIR} --project-dir {DBT_PROJECT_DIR} 
+            --profiles-dir {DBT_PROJECT_DIR} --project-dir {DBT_PROJECT_DIR}
             """,
             dag=dag,
         )

@@ -12,17 +12,11 @@ DBT_GLOBAL_CLI_FLAGS = '--no-write-json'
 DBT_TARGET = 'dev'
 DBT_TAG = 'tag_staging'
 
-default_args = {
-    'owner': 'astronomer',
-    'depends_on_past': False,
-    'start_date': datetime(2020, 12, 23),
-    'email': ['noreply@astronomer.io'],
-    'email_on_failure': False
-}
 
 dag = DAG(
     'dbt_advanced_dag_utility',
-    default_args=default_args,
+    start_date=datetime(2020, 12, 23),
+    default_args={"owner": "astronomer", "email_on_failure": False},
     description='A dbt wrapper for Airflow using a utility class to map the dbt DAG to Airflow tasks',
     schedule_interval=None,
     catchup=False
