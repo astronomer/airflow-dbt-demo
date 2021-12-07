@@ -1,9 +1,8 @@
-import datetime
 import json
+from datetime import datetime, timedelta
+
 from airflow import DAG
-from airflow.operators.bash_operator import BashOperator
-from airflow.utils.dates import datetime
-from airflow.utils.dates import timedelta
+from airflow.operators.bash import BashOperator
 from airflow.utils.task_group import TaskGroup
 
 # We're hardcoding this value here for the purpose of the demo, but in a production environment this

@@ -1,7 +1,8 @@
+from datetime import datetime
+
 from airflow import DAG
 from airflow.operators.dummy import DummyOperator
 from airflow.operators.bash import BashOperator
-from airflow.utils.dates import datetime
 from airflow.utils.task_group import TaskGroup
 from include.dbt_dag_parser import DbtDagParser
 
