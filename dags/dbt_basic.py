@@ -1,17 +1,22 @@
-from datetime import datetime, timedelta
+from datetime import timedelta
+from pendulum import datetime
 
 from airflow import DAG
 from airflow.operators.bash_operator import BashOperator
 
 # We're hardcoding this value here for the purpose of the demo, but in a production environment this
 # would probably come from a config file and/or environment variables!
-DBT_PROJECT_DIR = '/usr/local/airflow/dbt'
+DBT_PROJECT_DIR = "/usr/local/airflow/dbt"
 
 
 dag = DAG(
     "dbt_basic_dag",
     start_date=datetime(2020, 12, 23),
-    default_args={"owner": "astronomer", "email_on_failure": False},
+    default_args={
+        "owner": "astronomer",
+        "email_on_failure": False,
+        "env": {"DBW_USER": "{{ conn.postgres.login }}", "DBW_PASS": "{{ conn.postgres.password }}"},
+    },
     description="A sample Airflow DAG to invoke dbt runs using a BashOperator",
     schedule_interval=None,
     catchup=False,

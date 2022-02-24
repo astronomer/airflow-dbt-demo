@@ -5,9 +5,8 @@ jaffle_shop:
       threads: 1
       host: "{{ env_var('DBW_HOST', 'postgres') }}"
       port: "{{ env_var('DBW_PORT', 5432) }}"
-      user: "{{ env_var('DBW_USER', 'postgres') }}"
-      pass: "{{ env_var('DBW_PASS', 'postgres') }}"
+      user: "{{ env_var('DBW_USER') }}"
+      pass: "{{ env_var('DBW_PASS') }}"
       dbname: "{{ env_var('DBW_DBNAME', 'postgres') }}"
       schema: "{{ env_var('DBW_SCHEMA', 'public') }}"
   target: dev
-  

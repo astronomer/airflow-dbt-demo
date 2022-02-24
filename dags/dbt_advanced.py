@@ -1,5 +1,6 @@
 import json
-from datetime import datetime, timedelta
+from datetime import timedelta
+from pendulum import datetime
 
 from airflow import DAG
 from airflow.operators.bash import BashOperator
@@ -7,14 +8,18 @@ from airflow.utils.task_group import TaskGroup
 
 # We're hardcoding this value here for the purpose of the demo, but in a production environment this
 # would probably come from a config file and/or environment variables!
-DBT_PROJECT_DIR = '/usr/local/airflow/dbt'
+DBT_PROJECT_DIR = "/usr/local/airflow/dbt"
 
 
 dag = DAG(
-    'dbt_advanced_dag',
+    "dbt_advanced_dag",
     start_date=datetime(2020, 12, 23),
-    default_args={"owner": "astronomer", "email_on_failure": False},
-    description='A dbt wrapper for airflow',
+    default_args={
+        "owner": "astronomer",
+        "email_on_failure": False,
+        "env": {"DBW_USER": "{{ conn.postgres.login }}", "DBW_PASS": "{{ conn.postgres.password }}"},
+    },
+    description="A dbt wrapper for airflow",
     schedule_interval=None,
     catchup=False,
 )
@@ -58,7 +63,7 @@ def make_dbt_task(node, dbt_verb):
 dbt_seed = BashOperator(
     task_id="dbt_seed",
     bash_command=f"dbt seed --profiles-dir {DBT_PROJECT_DIR} --project-dir {DBT_PROJECT_DIR}",
-    dag=dag
+    dag=dag,
 )
 
 data = load_manifest()
