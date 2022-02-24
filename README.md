@@ -12,13 +12,14 @@
 
 ## dbt project setup
 
-We are currently using [the jaffle_shop sample dbt project](https://github.com/fishtown-analytics/jaffle_shop). 
+We are currently using [the jaffle_shop sample dbt project](https://github.com/fishtown-analytics/jaffle_shop).
 The only files required for the Airflow DAGs to run are `dbt_project.yml`, `profiles.yml` and `target/manifest.json`, but we included the models for completeness. If you would like to try these DAGs with your own dbt workflow, feel free to drop in your own project files.
 
 
 ## Notes
-- If you make changes to the dbt project, you will need to run `dbt compile` in order to update the `manifest.json` file. 
-This may be done manually during development, as part of a CI/CD pipeline, or as a separate step in a production pipeline 
+- To use these DAGs, Airflow 2.2+ is required. These DAGs have been tested with Airflow 2.2.0.
+- If you make changes to the dbt project, you will need to run `dbt compile` in order to update the `manifest.json` file.
+This may be done manually during development, as part of a CI/CD pipeline, or as a separate step in a production pipeline
 run *before* the Airflow DAG is triggered.
 - The sample dbt project contains the `profiles.yml`, which is configured to use environment variables. If the environment variables do not exist, we default to use Astronomer's containerized postgres database. This is **solely for the purpose of this demo**. In a production environment, you should use a production-ready database and use environment variables or some other form of secret management for the database credentials.
 - Each DAG runs a `dbt_seed` task at the beginning that loads sample data into the database. This is simply for the purpose of this demo.
