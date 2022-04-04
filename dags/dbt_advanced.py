@@ -9,9 +9,9 @@ from airflow.operators.bash import BashOperator
 DBT_PROJECT_DIR = "/usr/local/airflow/dbt"
 
 with DAG(
-    'dbt_advanced_dag',
+    "dbt_advanced_dag",
     start_date=datetime(2020, 12, 23),
-    description='A dbt wrapper for Airflow.',
+    description="A dbt wrapper for Airflow.",
     schedule_interval=None,
     catchup=False,
 ) as dag:

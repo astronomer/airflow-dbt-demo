@@ -19,17 +19,17 @@ with DAG(
     # In practice, we'd usually expect the data to have already been loaded to the database.
     dbt_seed = BashOperator(
         task_id="dbt_seed",
-        bash_command=f"dbt seed --profiles-dir {DBT_PROJECT_DIR} --project-dir {DBT_PROJECT_DIR}"
+        bash_command=f"dbt seed --profiles-dir {DBT_PROJECT_DIR} --project-dir {DBT_PROJECT_DIR}",
     )
 
     dbt_run = BashOperator(
         task_id="dbt_run",
-        bash_command=f"dbt run --profiles-dir {DBT_PROJECT_DIR} --project-dir {DBT_PROJECT_DIR}"
+        bash_command=f"dbt run --profiles-dir {DBT_PROJECT_DIR} --project-dir {DBT_PROJECT_DIR}",
     )
 
     dbt_test = BashOperator(
         task_id="dbt_test",
-        bash_command=f"dbt test --profiles-dir {DBT_PROJECT_DIR} --project-dir {DBT_PROJECT_DIR}"
+        bash_command=f"dbt test --profiles-dir {DBT_PROJECT_DIR} --project-dir {DBT_PROJECT_DIR}",
     )
 
     dbt_seed >> dbt_run >> dbt_test
