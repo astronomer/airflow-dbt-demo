@@ -3,7 +3,6 @@ from pendulum import datetime
 from airflow import DAG
 from airflow.operators.dummy import DummyOperator
 from airflow.operators.bash import BashOperator
-from airflow.utils.task_group import TaskGroup
 from include.dbt_dag_parser import DbtDagParser
 
 # We're hardcoding these values here for the purpose of the demo, but in a production environment these
@@ -14,20 +13,13 @@ DBT_TARGET = "dev"
 DBT_TAG = "tag_staging"
 
 
-dag = DAG(
+with DAG(
     "dbt_advanced_dag_utility",
     start_date=datetime(2020, 12, 23),
-    default_args={
-        "owner": "astronomer",
-        "email_on_failure": False,
-        "env": {"DBW_USER": "{{ conn.postgres.login }}", "DBW_PASS": "{{ conn.postgres.password }}"},
-    },
     description="A dbt wrapper for Airflow using a utility class to map the dbt DAG to Airflow tasks",
     schedule_interval=None,
     catchup=False,
-)
-
-with dag:
+) as dag:
 
     start_dummy = DummyOperator(task_id="start")
     # We're using the dbt seed command here to populate the database for the purpose of this demo
@@ -40,7 +32,6 @@ with dag:
     # The parser parses out a dbt manifest.json file and dynamically creates tasks for "dbt run" and "dbt test"
     # commands for each individual model. It groups them into task groups which we can retrieve and use in the DAG.
     dag_parser = DbtDagParser(
-        dag=dag,
         dbt_global_cli_flags=DBT_GLOBAL_CLI_FLAGS,
         dbt_project_dir=DBT_PROJECT_DIR,
         dbt_profiles_dir=DBT_PROJECT_DIR,
