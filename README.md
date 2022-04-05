@@ -21,5 +21,7 @@ The only files required for the Airflow DAGs to run are `dbt_project.yml`, `prof
 - If you make changes to the dbt project, you will need to run `dbt compile` in order to update the `manifest.json` file.
 This may be done manually during development, as part of a CI/CD pipeline, or as a separate step in a production pipeline
 run *before* the Airflow DAG is triggered.
-- The sample dbt project contains the `profiles.yml`, which is configured to use environment variables. If the environment variables do not exist, we default to use Astronomer's containerized postgres database. This is **solely for the purpose of this demo**. In a production environment, you should use a production-ready database and use environment variables or some other form of secret management for the database credentials.
+- The sample dbt project contains the `profiles.yml`, which is configured to use environment variables. The
+database credentials from an Airflow connection are passed as environment variables to the `BashOperator`
+tasks running the dbt commands.
 - Each DAG runs a `dbt_seed` task at the beginning that loads sample data into the database. This is simply for the purpose of this demo.

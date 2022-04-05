@@ -8,6 +8,14 @@ from airflow.operators.bash import BashOperator
 # would probably come from a config file and/or environment variables!
 DBT_PROJECT_DIR = "/usr/local/airflow/dbt"
 
+DBT_ENV = {
+    "DBT_USER": "{{ conn.postgres.login }}",
+    "DBT_ENV_SECRET_PASSWORD": "{{ conn.postgres.password }}",
+    "DBT_HOST": "{{ conn.postgres.host }}",
+    "DBT_SCHEMA": "{{ conn.postgres.schema }}",
+    "DBT_PORT": "{{ conn.postgres.port }}",
+}
+
 with DAG(
     "dbt_advanced_dag",
     start_date=datetime(2020, 12, 23),
@@ -29,19 +37,21 @@ with DAG(
         if dbt_verb == "run":
             dbt_task = BashOperator(
                 task_id=node,
-                bash_command=f"""
-                dbt {GLOBAL_CLI_FLAGS} {dbt_verb} --target dev --models {model} \
-                --profiles-dir {DBT_PROJECT_DIR} --project-dir {DBT_PROJECT_DIR}
-                """,
+                bash_command=(
+                    f"dbt {GLOBAL_CLI_FLAGS} {dbt_verb} --target dev --models {model} "
+                    f"--profiles-dir {DBT_PROJECT_DIR} --project-dir {DBT_PROJECT_DIR}"
+                ),
+                env=DBT_ENV,
             )
         elif dbt_verb == "test":
             node_test = node.replace("model", "test")
             dbt_task = BashOperator(
                 task_id=node_test,
-                bash_command=f"""
-                dbt {GLOBAL_CLI_FLAGS} {dbt_verb} --target dev --models {model} \
-                --profiles-dir {DBT_PROJECT_DIR} --project-dir {DBT_PROJECT_DIR}
-                """,
+                bash_command=(
+                    f"dbt {GLOBAL_CLI_FLAGS} {dbt_verb} --target dev --models {model} "
+                    f"--profiles-dir {DBT_PROJECT_DIR} --project-dir {DBT_PROJECT_DIR}"
+                ),
+                env=DBT_ENV,
             )
         return dbt_task
 
@@ -50,6 +60,7 @@ with DAG(
     dbt_seed = BashOperator(
         task_id="dbt_seed",
         bash_command=f"dbt seed --profiles-dir {DBT_PROJECT_DIR} --project-dir {DBT_PROJECT_DIR}",
+        env=DBT_ENV,
     )
 
     data = load_manifest()

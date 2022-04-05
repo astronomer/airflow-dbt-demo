@@ -25,7 +25,17 @@ with DAG(
     # We're using the dbt seed command here to populate the database for the purpose of this demo
     dbt_seed = BashOperator(
         task_id="dbt_seed",
-        bash_command=f"dbt {DBT_GLOBAL_CLI_FLAGS} seed --profiles-dir {DBT_PROJECT_DIR} --project-dir {DBT_PROJECT_DIR}",
+        bash_command=(
+            f"dbt {DBT_GLOBAL_CLI_FLAGS} seed "
+            f"--profiles-dir {DBT_PROJECT_DIR} --project-dir {DBT_PROJECT_DIR}"
+        ),
+        env={
+            "DBT_USER": "{{ conn.postgres.login }}",
+            "DBT_ENV_SECRET_PASSWORD": "{{ conn.postgres.password }}",
+            "DBT_HOST": "{{ conn.postgres.host }}",
+            "DBT_SCHEMA": "{{ conn.postgres.schema }}",
+            "DBT_PORT": "{{ conn.postgres.port }}",
+        },
     )
     end_dummy = DummyOperator(task_id="end")
 
