@@ -63,6 +63,13 @@ with DAG(
         env=DBT_ENV,
     )
 
+    # dbt deps pulls the most recent version of the dependencies listed in your packages.yml from git
+    dbt_deps = BashOperator(
+        task_id="dbt_deps",
+        bash_command=f"dbt deps --profiles-dir {DBT_PROJECT_DIR} --project-dir {DBT_PROJECT_DIR}",
+        env=DBT_ENV,
+    )
+
     data = load_manifest()
     dbt_tasks = {}
 
@@ -76,7 +83,7 @@ with DAG(
         if node.split(".")[0] == "model":
             # Set dependency to run tests on a model after model runs finishes
             node_test = node.replace("model", "test")
-            dbt_tasks[node] >> dbt_tasks[node_test]
+            dbt_deps >> dbt_tasks[node] >> dbt_tasks[node_test]
             # Set all model -> model dependencies
             for upstream_node in data["nodes"][node]["depends_on"]["nodes"]:
                 upstream_node_type = upstream_node.split(".")[0]
