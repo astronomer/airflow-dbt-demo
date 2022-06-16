@@ -78,7 +78,10 @@ with DAG(
             node_test = node.replace("model", "test")
             dbt_tasks[node] >> dbt_tasks[node_test]
             # Set all model -> model dependencies
-            for upstream_node in data["nodes"][node]["depends_on"]["nodes"]:
+            upstream_nodes = data["nodes"][node]["depends_on"]["nodes"]
+            if not upstream_nodes:
+                dbt_seed >> dbt_tasks[node]
+            for upstream_node in upstream_nodes:
                 upstream_node_type = upstream_node.split(".")[0]
                 if upstream_node_type == "model":
-                    dbt_seed >> dbt_tasks[upstream_node] >> dbt_tasks[node]
+                    dbt_tasks[upstream_node] >> dbt_tasks[node]
