@@ -1,3 +1,9 @@
+"""
+A basic dbt DAG that shows how to run dbt commands via the BashOperator
+
+Follows the standard dbt seed, run, and test pattern.
+"""
+
 from pendulum import datetime
 
 from airflow import DAG
