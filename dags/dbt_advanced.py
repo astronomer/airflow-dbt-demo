@@ -1,3 +1,9 @@
+"""
+Exploes a dbt DAG into an Airflow DAG by parsing the dbt manifest file
+
+Shows the data being loaded into a postgres database as part of the DAG, normally that would be preloaded.
+"""
+
 import json
 from pendulum import datetime
 
@@ -22,6 +28,7 @@ with DAG(
     description="A dbt wrapper for Airflow.",
     schedule_interval=None,
     catchup=False,
+    doc_md=__doc__
 ) as dag:
 
     def load_manifest():
