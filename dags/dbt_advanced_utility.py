@@ -1,3 +1,9 @@
+"""
+Shows how to parse a dbt manifest file to "explode" the dbt DAG into Airflow
+
+Each dbt model is run as a bash command.
+"""
+
 from pendulum import datetime
 
 from airflow import DAG
@@ -19,6 +25,7 @@ with DAG(
     description="A dbt wrapper for Airflow using a utility class to map the dbt DAG to Airflow tasks",
     schedule_interval=None,
     catchup=False,
+    doc_md=__doc__
 ) as dag:
 
     start_dummy = DummyOperator(task_id="start")
