@@ -13,7 +13,7 @@ from include.dbt_dag_parser import DbtDagParser
 
 # We're hardcoding these values here for the purpose of the demo, but in a production environment these
 # would probably come from a config file and/or environment variables!
-DBT_PROJECT_DIR = "include/dbt"
+DBT_PROJECT_DIR = "/usr/local/airflow/dbt"
 DBT_GLOBAL_CLI_FLAGS = "--no-write-json"
 DBT_TARGET = "dev"
 DBT_TAG = "tag_staging"
