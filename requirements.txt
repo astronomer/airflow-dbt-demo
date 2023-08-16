@@ -1,2 +1,12 @@
-dbt-core==1.3.0b2
+airflow-dbt
+apache-airflow
+apache-airflow-providers-celery
+apache-airflow-providers-cncf-kubernetes
+apache-airflow-providers-ftp
+apache-airflow-providers-http
+apache-airflow-providers-imap
+apache-airflow-providers-sqlite
+boto3
+botocore
+dbt-core==1.6.0b2
 pendulum==2.1.2

@@ -1,0 +1,983 @@
+[2023-08-16T21:25:40.603+0000] {processor.py:157} INFO - Started process (PID=32) to work on /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:25:40.613+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dbt_advanced_utility.py for tasks to queue
+[2023-08-16T21:25:40.620+0000] {logging_mixin.py:149} INFO - [2023-08-16T21:25:40.619+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:25:40.690+0000] {logging_mixin.py:149} INFO - [2023-08-16T21:25:40.687+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/dbt_advanced_utility.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dbt_advanced_utility.py", line 12, in <module>
+    from include.dbt_dag_parser import DbtDagParser
+ModuleNotFoundError: No module named 'include'
+[2023-08-16T21:25:40.691+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:25:40.844+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dbt_advanced_utility.py took 0.245 seconds
+[2023-08-16T21:27:11.212+0000] {processor.py:157} INFO - Started process (PID=32) to work on /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:27:11.221+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dbt_advanced_utility.py for tasks to queue
+[2023-08-16T21:27:11.223+0000] {logging_mixin.py:149} INFO - [2023-08-16T21:27:11.223+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:27:11.238+0000] {logging_mixin.py:149} INFO - [2023-08-16T21:27:11.233+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/dbt_advanced_utility.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dbt_advanced_utility.py", line 12, in <module>
+    from include.dbt_dag_parser import DbtDagParser
+ModuleNotFoundError: No module named 'include'
+[2023-08-16T21:27:11.239+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:27:11.268+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dbt_advanced_utility.py took 0.059 seconds
+[2023-08-16T21:27:41.785+0000] {processor.py:157} INFO - Started process (PID=42) to work on /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:27:41.788+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dbt_advanced_utility.py for tasks to queue
+[2023-08-16T21:27:41.789+0000] {logging_mixin.py:149} INFO - [2023-08-16T21:27:41.789+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:27:41.799+0000] {logging_mixin.py:149} INFO - [2023-08-16T21:27:41.797+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/dbt_advanced_utility.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dbt_advanced_utility.py", line 12, in <module>
+    from include.dbt_dag_parser import DbtDagParser
+ModuleNotFoundError: No module named 'include'
+[2023-08-16T21:27:41.800+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:27:41.819+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dbt_advanced_utility.py took 0.038 seconds
+[2023-08-16T21:28:12.321+0000] {processor.py:157} INFO - Started process (PID=52) to work on /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:28:12.324+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dbt_advanced_utility.py for tasks to queue
+[2023-08-16T21:28:12.325+0000] {logging_mixin.py:149} INFO - [2023-08-16T21:28:12.325+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:28:12.335+0000] {logging_mixin.py:149} INFO - [2023-08-16T21:28:12.333+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/dbt_advanced_utility.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dbt_advanced_utility.py", line 12, in <module>
+    from include.dbt_dag_parser import DbtDagParser
+ModuleNotFoundError: No module named 'include'
+[2023-08-16T21:28:12.336+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:28:12.357+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dbt_advanced_utility.py took 0.040 seconds
+[2023-08-16T21:28:42.927+0000] {processor.py:157} INFO - Started process (PID=62) to work on /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:28:42.930+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dbt_advanced_utility.py for tasks to queue
+[2023-08-16T21:28:42.932+0000] {logging_mixin.py:149} INFO - [2023-08-16T21:28:42.932+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:28:42.941+0000] {logging_mixin.py:149} INFO - [2023-08-16T21:28:42.939+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/dbt_advanced_utility.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dbt_advanced_utility.py", line 12, in <module>
+    from include.dbt_dag_parser import DbtDagParser
+ModuleNotFoundError: No module named 'include'
+[2023-08-16T21:28:42.943+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:28:42.962+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dbt_advanced_utility.py took 0.038 seconds
+[2023-08-16T21:29:13.525+0000] {processor.py:157} INFO - Started process (PID=72) to work on /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:29:13.527+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dbt_advanced_utility.py for tasks to queue
+[2023-08-16T21:29:13.528+0000] {logging_mixin.py:149} INFO - [2023-08-16T21:29:13.528+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:29:13.537+0000] {logging_mixin.py:149} INFO - [2023-08-16T21:29:13.535+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/dbt_advanced_utility.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dbt_advanced_utility.py", line 12, in <module>
+    from include.dbt_dag_parser import DbtDagParser
+ModuleNotFoundError: No module named 'include'
+[2023-08-16T21:29:13.539+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:29:13.558+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dbt_advanced_utility.py took 0.038 seconds
+[2023-08-16T21:29:44.320+0000] {processor.py:157} INFO - Started process (PID=82) to work on /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:29:44.321+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dbt_advanced_utility.py for tasks to queue
+[2023-08-16T21:29:44.323+0000] {logging_mixin.py:149} INFO - [2023-08-16T21:29:44.323+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:29:44.330+0000] {logging_mixin.py:149} INFO - [2023-08-16T21:29:44.329+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/dbt_advanced_utility.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dbt_advanced_utility.py", line 12, in <module>
+    from include.dbt_dag_parser import DbtDagParser
+ModuleNotFoundError: No module named 'include'
+[2023-08-16T21:29:44.332+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:29:44.349+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dbt_advanced_utility.py took 0.032 seconds
+[2023-08-16T21:30:14.834+0000] {processor.py:157} INFO - Started process (PID=92) to work on /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:30:14.836+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dbt_advanced_utility.py for tasks to queue
+[2023-08-16T21:30:14.837+0000] {logging_mixin.py:149} INFO - [2023-08-16T21:30:14.837+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:30:14.853+0000] {logging_mixin.py:149} INFO - [2023-08-16T21:30:14.848+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/dbt_advanced_utility.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dbt_advanced_utility.py", line 12, in <module>
+    from include.dbt_dag_parser import DbtDagParser
+ModuleNotFoundError: No module named 'include'
+[2023-08-16T21:30:14.854+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:30:14.898+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dbt_advanced_utility.py took 0.067 seconds
+[2023-08-16T21:30:45.467+0000] {processor.py:157} INFO - Started process (PID=102) to work on /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:30:45.468+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dbt_advanced_utility.py for tasks to queue
+[2023-08-16T21:30:45.469+0000] {logging_mixin.py:149} INFO - [2023-08-16T21:30:45.469+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:30:45.480+0000] {logging_mixin.py:149} INFO - [2023-08-16T21:30:45.477+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/dbt_advanced_utility.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dbt_advanced_utility.py", line 12, in <module>
+    from include.dbt_dag_parser import DbtDagParser
+ModuleNotFoundError: No module named 'include'
+[2023-08-16T21:30:45.481+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:30:45.501+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dbt_advanced_utility.py took 0.036 seconds
+[2023-08-16T21:31:16.046+0000] {processor.py:157} INFO - Started process (PID=112) to work on /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:31:16.049+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dbt_advanced_utility.py for tasks to queue
+[2023-08-16T21:31:16.051+0000] {logging_mixin.py:149} INFO - [2023-08-16T21:31:16.050+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:31:16.061+0000] {logging_mixin.py:149} INFO - [2023-08-16T21:31:16.058+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/dbt_advanced_utility.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dbt_advanced_utility.py", line 12, in <module>
+    from include.dbt_dag_parser import DbtDagParser
+ModuleNotFoundError: No module named 'include'
+[2023-08-16T21:31:16.062+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:31:16.082+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dbt_advanced_utility.py took 0.041 seconds
+[2023-08-16T21:31:46.666+0000] {processor.py:157} INFO - Started process (PID=122) to work on /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:31:46.668+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dbt_advanced_utility.py for tasks to queue
+[2023-08-16T21:31:46.670+0000] {logging_mixin.py:149} INFO - [2023-08-16T21:31:46.670+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:31:46.682+0000] {logging_mixin.py:149} INFO - [2023-08-16T21:31:46.679+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/dbt_advanced_utility.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dbt_advanced_utility.py", line 12, in <module>
+    from include.dbt_dag_parser import DbtDagParser
+ModuleNotFoundError: No module named 'include'
+[2023-08-16T21:31:46.683+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:31:46.705+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dbt_advanced_utility.py took 0.042 seconds
+[2023-08-16T21:32:17.219+0000] {processor.py:157} INFO - Started process (PID=132) to work on /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:32:17.221+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dbt_advanced_utility.py for tasks to queue
+[2023-08-16T21:32:17.223+0000] {logging_mixin.py:149} INFO - [2023-08-16T21:32:17.223+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:32:17.236+0000] {logging_mixin.py:149} INFO - [2023-08-16T21:32:17.233+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/dbt_advanced_utility.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dbt_advanced_utility.py", line 12, in <module>
+    from include.dbt_dag_parser import DbtDagParser
+ModuleNotFoundError: No module named 'include'
+[2023-08-16T21:32:17.239+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:32:17.254+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dbt_advanced_utility.py took 0.038 seconds
+[2023-08-16T21:32:47.797+0000] {processor.py:157} INFO - Started process (PID=142) to work on /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:32:47.799+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dbt_advanced_utility.py for tasks to queue
+[2023-08-16T21:32:47.800+0000] {logging_mixin.py:149} INFO - [2023-08-16T21:32:47.800+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:32:47.820+0000] {logging_mixin.py:149} INFO - [2023-08-16T21:32:47.816+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/dbt_advanced_utility.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dbt_advanced_utility.py", line 12, in <module>
+    from include.dbt_dag_parser import DbtDagParser
+ModuleNotFoundError: No module named 'include'
+[2023-08-16T21:32:47.822+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:32:47.851+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dbt_advanced_utility.py took 0.058 seconds
+[2023-08-16T21:33:18.494+0000] {processor.py:157} INFO - Started process (PID=152) to work on /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:33:18.496+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dbt_advanced_utility.py for tasks to queue
+[2023-08-16T21:33:18.498+0000] {logging_mixin.py:149} INFO - [2023-08-16T21:33:18.498+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:33:18.529+0000] {logging_mixin.py:149} INFO - [2023-08-16T21:33:18.523+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/dbt_advanced_utility.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dbt_advanced_utility.py", line 12, in <module>
+    from include.dbt_dag_parser import DbtDagParser
+ModuleNotFoundError: No module named 'include'
+[2023-08-16T21:33:18.532+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:33:18.559+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dbt_advanced_utility.py took 0.074 seconds
+[2023-08-16T21:33:49.309+0000] {processor.py:157} INFO - Started process (PID=162) to work on /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:33:49.316+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dbt_advanced_utility.py for tasks to queue
+[2023-08-16T21:33:49.338+0000] {logging_mixin.py:149} INFO - [2023-08-16T21:33:49.338+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:33:49.361+0000] {logging_mixin.py:149} INFO - [2023-08-16T21:33:49.357+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/dbt_advanced_utility.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dbt_advanced_utility.py", line 12, in <module>
+    from include.dbt_dag_parser import DbtDagParser
+ModuleNotFoundError: No module named 'include'
+[2023-08-16T21:33:49.364+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:33:49.439+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dbt_advanced_utility.py took 0.139 seconds
+[2023-08-16T21:34:20.096+0000] {processor.py:157} INFO - Started process (PID=172) to work on /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:34:20.101+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dbt_advanced_utility.py for tasks to queue
+[2023-08-16T21:34:20.104+0000] {logging_mixin.py:149} INFO - [2023-08-16T21:34:20.104+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:34:20.122+0000] {logging_mixin.py:149} INFO - [2023-08-16T21:34:20.119+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/dbt_advanced_utility.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dbt_advanced_utility.py", line 12, in <module>
+    from include.dbt_dag_parser import DbtDagParser
+ModuleNotFoundError: No module named 'include'
+[2023-08-16T21:34:20.123+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:34:20.152+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dbt_advanced_utility.py took 0.065 seconds
+[2023-08-16T21:34:50.814+0000] {processor.py:157} INFO - Started process (PID=182) to work on /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:34:50.816+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dbt_advanced_utility.py for tasks to queue
+[2023-08-16T21:34:50.817+0000] {logging_mixin.py:149} INFO - [2023-08-16T21:34:50.817+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:34:50.828+0000] {logging_mixin.py:149} INFO - [2023-08-16T21:34:50.826+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/dbt_advanced_utility.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dbt_advanced_utility.py", line 12, in <module>
+    from include.dbt_dag_parser import DbtDagParser
+ModuleNotFoundError: No module named 'include'
+[2023-08-16T21:34:50.830+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:34:50.855+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dbt_advanced_utility.py took 0.045 seconds
+[2023-08-16T21:35:21.479+0000] {processor.py:157} INFO - Started process (PID=193) to work on /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:35:21.481+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dbt_advanced_utility.py for tasks to queue
+[2023-08-16T21:35:21.483+0000] {logging_mixin.py:149} INFO - [2023-08-16T21:35:21.483+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:35:21.496+0000] {logging_mixin.py:149} INFO - [2023-08-16T21:35:21.494+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/dbt_advanced_utility.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dbt_advanced_utility.py", line 12, in <module>
+    from include.dbt_dag_parser import DbtDagParser
+ModuleNotFoundError: No module named 'include'
+[2023-08-16T21:35:21.499+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:35:21.524+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dbt_advanced_utility.py took 0.049 seconds
+[2023-08-16T21:44:39.160+0000] {processor.py:157} INFO - Started process (PID=32) to work on /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:44:39.166+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dbt_advanced_utility.py for tasks to queue
+[2023-08-16T21:44:39.168+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:44:39.168+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:44:39.180+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:44:39.178+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/dbt_advanced_utility.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dbt_advanced_utility.py", line 12, in <module>
+    from include.dbt_dag_parser import DbtDagParser
+ModuleNotFoundError: No module named 'include'
+[2023-08-16T21:44:39.182+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:44:39.209+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dbt_advanced_utility.py took 0.051 seconds
+[2023-08-16T21:45:09.648+0000] {processor.py:157} INFO - Started process (PID=43) to work on /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:45:09.650+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dbt_advanced_utility.py for tasks to queue
+[2023-08-16T21:45:09.652+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:45:09.652+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:45:09.666+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:45:09.664+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/dbt_advanced_utility.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dbt_advanced_utility.py", line 12, in <module>
+    from include.dbt_dag_parser import DbtDagParser
+ModuleNotFoundError: No module named 'include'
+[2023-08-16T21:45:09.668+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:45:09.692+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dbt_advanced_utility.py took 0.048 seconds
+[2023-08-16T21:45:40.289+0000] {processor.py:157} INFO - Started process (PID=53) to work on /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:45:40.292+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dbt_advanced_utility.py for tasks to queue
+[2023-08-16T21:45:40.295+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:45:40.294+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:45:40.310+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:45:40.307+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/dbt_advanced_utility.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dbt_advanced_utility.py", line 12, in <module>
+    from include.dbt_dag_parser import DbtDagParser
+ModuleNotFoundError: No module named 'include'
+[2023-08-16T21:45:40.314+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:45:40.361+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dbt_advanced_utility.py took 0.080 seconds
+[2023-08-16T21:46:11.140+0000] {processor.py:157} INFO - Started process (PID=63) to work on /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:46:11.143+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dbt_advanced_utility.py for tasks to queue
+[2023-08-16T21:46:11.144+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:46:11.144+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:46:11.175+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:46:11.166+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/dbt_advanced_utility.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dbt_advanced_utility.py", line 12, in <module>
+    from include.dbt_dag_parser import DbtDagParser
+ModuleNotFoundError: No module named 'include'
+[2023-08-16T21:46:11.177+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:46:11.243+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dbt_advanced_utility.py took 0.107 seconds
+[2023-08-16T21:46:41.838+0000] {processor.py:157} INFO - Started process (PID=73) to work on /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:46:41.840+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dbt_advanced_utility.py for tasks to queue
+[2023-08-16T21:46:41.841+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:46:41.841+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:46:41.853+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:46:41.850+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/dbt_advanced_utility.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dbt_advanced_utility.py", line 12, in <module>
+    from include.dbt_dag_parser import DbtDagParser
+ModuleNotFoundError: No module named 'include'
+[2023-08-16T21:46:41.855+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:46:41.874+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dbt_advanced_utility.py took 0.040 seconds
+[2023-08-16T21:47:12.503+0000] {processor.py:157} INFO - Started process (PID=83) to work on /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:47:12.505+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dbt_advanced_utility.py for tasks to queue
+[2023-08-16T21:47:12.506+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:47:12.506+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:47:12.518+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:47:12.515+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/dbt_advanced_utility.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dbt_advanced_utility.py", line 12, in <module>
+    from include.dbt_dag_parser import DbtDagParser
+ModuleNotFoundError: No module named 'include'
+[2023-08-16T21:47:12.520+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:47:12.541+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dbt_advanced_utility.py took 0.041 seconds
+[2023-08-16T21:47:23.770+0000] {processor.py:157} INFO - Started process (PID=85) to work on /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:47:23.773+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dbt_advanced_utility.py for tasks to queue
+[2023-08-16T21:47:23.776+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:47:23.775+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:47:23.812+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:47:23.808+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/dbt_advanced_utility.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dbt_advanced_utility.py", line 12, in <module>
+    from dags.utils.dbt_dag_parser import DbtDagParser
+ModuleNotFoundError: No module named 'dags'
+[2023-08-16T21:47:23.818+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:47:23.846+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dbt_advanced_utility.py took 0.081 seconds
+[2023-08-16T21:47:30.894+0000] {processor.py:157} INFO - Started process (PID=86) to work on /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:47:30.898+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dbt_advanced_utility.py for tasks to queue
+[2023-08-16T21:47:30.900+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:47:30.900+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:47:30.982+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:47:30.978+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/dbt_advanced_utility.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dbt_advanced_utility.py", line 55, in <module>
+    dbt_target=DBT_TARGET,
+  File "/opt/airflow/dags/utils/dbt_dag_parser.py", line 46, in __init__
+    self.make_dbt_task_groups()
+  File "/opt/airflow/dags/utils/dbt_dag_parser.py", line 108, in make_dbt_task_groups
+    manifest_json = self.load_dbt_manifest()
+  File "/opt/airflow/dags/utils/dbt_dag_parser.py", line 56, in load_dbt_manifest
+    with open(manifest_path) as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/usr/local/airflow/dbt/target/manifest.json'
+[2023-08-16T21:47:30.983+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:47:31.001+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dbt_advanced_utility.py took 0.114 seconds
+[2023-08-16T21:48:01.354+0000] {processor.py:157} INFO - Started process (PID=95) to work on /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:48:01.357+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dbt_advanced_utility.py for tasks to queue
+[2023-08-16T21:48:01.359+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:48:01.359+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:48:01.400+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:48:01.396+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/dbt_advanced_utility.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dbt_advanced_utility.py", line 55, in <module>
+    dbt_target=DBT_TARGET,
+  File "/opt/airflow/dags/utils/dbt_dag_parser.py", line 46, in __init__
+    self.make_dbt_task_groups()
+  File "/opt/airflow/dags/utils/dbt_dag_parser.py", line 108, in make_dbt_task_groups
+    manifest_json = self.load_dbt_manifest()
+  File "/opt/airflow/dags/utils/dbt_dag_parser.py", line 56, in load_dbt_manifest
+    with open(manifest_path) as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/usr/local/airflow/dbt/target/manifest.json'
+[2023-08-16T21:48:01.401+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:48:01.422+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dbt_advanced_utility.py took 0.073 seconds
+[2023-08-16T21:48:31.930+0000] {processor.py:157} INFO - Started process (PID=105) to work on /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:48:31.932+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dbt_advanced_utility.py for tasks to queue
+[2023-08-16T21:48:31.934+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:48:31.934+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:48:31.972+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:48:31.968+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/dbt_advanced_utility.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dbt_advanced_utility.py", line 55, in <module>
+    dbt_target=DBT_TARGET,
+  File "/opt/airflow/dags/utils/dbt_dag_parser.py", line 46, in __init__
+    self.make_dbt_task_groups()
+  File "/opt/airflow/dags/utils/dbt_dag_parser.py", line 108, in make_dbt_task_groups
+    manifest_json = self.load_dbt_manifest()
+  File "/opt/airflow/dags/utils/dbt_dag_parser.py", line 56, in load_dbt_manifest
+    with open(manifest_path) as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/usr/local/airflow/dbt/target/manifest.json'
+[2023-08-16T21:48:31.974+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:48:31.998+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dbt_advanced_utility.py took 0.072 seconds
+[2023-08-16T21:49:02.591+0000] {processor.py:157} INFO - Started process (PID=116) to work on /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:49:02.594+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dbt_advanced_utility.py for tasks to queue
+[2023-08-16T21:49:02.596+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:49:02.595+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:49:02.627+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:49:02.623+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/dbt_advanced_utility.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dbt_advanced_utility.py", line 55, in <module>
+    dbt_target=DBT_TARGET,
+  File "/opt/airflow/dags/utils/dbt_dag_parser.py", line 46, in __init__
+    self.make_dbt_task_groups()
+  File "/opt/airflow/dags/utils/dbt_dag_parser.py", line 108, in make_dbt_task_groups
+    manifest_json = self.load_dbt_manifest()
+  File "/opt/airflow/dags/utils/dbt_dag_parser.py", line 56, in load_dbt_manifest
+    with open(manifest_path) as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/usr/local/airflow/dbt/target/manifest.json'
+[2023-08-16T21:49:02.629+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:49:02.649+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dbt_advanced_utility.py took 0.062 seconds
+[2023-08-16T21:49:33.197+0000] {processor.py:157} INFO - Started process (PID=126) to work on /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:49:33.200+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dbt_advanced_utility.py for tasks to queue
+[2023-08-16T21:49:33.202+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:49:33.202+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:49:33.237+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:49:33.234+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/dbt_advanced_utility.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dbt_advanced_utility.py", line 55, in <module>
+    dbt_target=DBT_TARGET,
+  File "/opt/airflow/dags/utils/dbt_dag_parser.py", line 46, in __init__
+    self.make_dbt_task_groups()
+  File "/opt/airflow/dags/utils/dbt_dag_parser.py", line 108, in make_dbt_task_groups
+    manifest_json = self.load_dbt_manifest()
+  File "/opt/airflow/dags/utils/dbt_dag_parser.py", line 56, in load_dbt_manifest
+    with open(manifest_path) as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/usr/local/airflow/dbt/target/manifest.json'
+[2023-08-16T21:49:33.239+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:49:33.261+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dbt_advanced_utility.py took 0.067 seconds
+[2023-08-16T21:50:03.662+0000] {processor.py:157} INFO - Started process (PID=136) to work on /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:50:03.665+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dbt_advanced_utility.py for tasks to queue
+[2023-08-16T21:50:03.667+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:50:03.667+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:50:03.699+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:50:03.695+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/dbt_advanced_utility.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dbt_advanced_utility.py", line 55, in <module>
+    dbt_target=DBT_TARGET,
+  File "/opt/airflow/dags/utils/dbt_dag_parser.py", line 46, in __init__
+    self.make_dbt_task_groups()
+  File "/opt/airflow/dags/utils/dbt_dag_parser.py", line 108, in make_dbt_task_groups
+    manifest_json = self.load_dbt_manifest()
+  File "/opt/airflow/dags/utils/dbt_dag_parser.py", line 56, in load_dbt_manifest
+    with open(manifest_path) as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/usr/local/airflow/dbt/target/manifest.json'
+[2023-08-16T21:50:03.701+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:50:03.721+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dbt_advanced_utility.py took 0.064 seconds
+[2023-08-16T21:50:34.215+0000] {processor.py:157} INFO - Started process (PID=147) to work on /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:50:34.219+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dbt_advanced_utility.py for tasks to queue
+[2023-08-16T21:50:34.221+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:50:34.220+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:50:34.259+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:50:34.254+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/dbt_advanced_utility.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dbt_advanced_utility.py", line 55, in <module>
+    dbt_target=DBT_TARGET,
+  File "/opt/airflow/dags/utils/dbt_dag_parser.py", line 46, in __init__
+    self.make_dbt_task_groups()
+  File "/opt/airflow/dags/utils/dbt_dag_parser.py", line 108, in make_dbt_task_groups
+    manifest_json = self.load_dbt_manifest()
+  File "/opt/airflow/dags/utils/dbt_dag_parser.py", line 56, in load_dbt_manifest
+    with open(manifest_path) as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/usr/local/airflow/dbt/target/manifest.json'
+[2023-08-16T21:50:34.261+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:50:34.281+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dbt_advanced_utility.py took 0.070 seconds
+[2023-08-16T21:51:33.239+0000] {processor.py:157} INFO - Started process (PID=31) to work on /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:51:33.241+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dbt_advanced_utility.py for tasks to queue
+[2023-08-16T21:51:33.253+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:51:33.252+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:51:33.293+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:51:33.291+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/dbt_advanced_utility.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dbt_advanced_utility.py", line 55, in <module>
+    dbt_target=DBT_TARGET,
+  File "/opt/airflow/dags/utils/dbt_dag_parser.py", line 46, in __init__
+    self.make_dbt_task_groups()
+  File "/opt/airflow/dags/utils/dbt_dag_parser.py", line 108, in make_dbt_task_groups
+    manifest_json = self.load_dbt_manifest()
+  File "/opt/airflow/dags/utils/dbt_dag_parser.py", line 56, in load_dbt_manifest
+    with open(manifest_path) as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/usr/local/airflow/dbt/target/manifest.json'
+[2023-08-16T21:51:33.295+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:51:33.321+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dbt_advanced_utility.py took 0.087 seconds
+[2023-08-16T21:52:03.914+0000] {processor.py:157} INFO - Started process (PID=42) to work on /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:52:03.917+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dbt_advanced_utility.py for tasks to queue
+[2023-08-16T21:52:03.918+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:52:03.918+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:52:03.967+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:52:03.958+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/dbt_advanced_utility.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dbt_advanced_utility.py", line 55, in <module>
+    dbt_target=DBT_TARGET,
+  File "/opt/airflow/dags/utils/dbt_dag_parser.py", line 46, in __init__
+    self.make_dbt_task_groups()
+  File "/opt/airflow/dags/utils/dbt_dag_parser.py", line 108, in make_dbt_task_groups
+    manifest_json = self.load_dbt_manifest()
+  File "/opt/airflow/dags/utils/dbt_dag_parser.py", line 56, in load_dbt_manifest
+    with open(manifest_path) as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/usr/local/airflow/dbt/target/manifest.json'
+[2023-08-16T21:52:03.972+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:52:03.995+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dbt_advanced_utility.py took 0.089 seconds
+[2023-08-16T21:52:34.546+0000] {processor.py:157} INFO - Started process (PID=53) to work on /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:52:34.550+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dbt_advanced_utility.py for tasks to queue
+[2023-08-16T21:52:34.553+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:52:34.552+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:52:34.582+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:52:34.579+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/dbt_advanced_utility.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dbt_advanced_utility.py", line 55, in <module>
+    dbt_target=DBT_TARGET,
+  File "/opt/airflow/dags/utils/dbt_dag_parser.py", line 46, in __init__
+    self.make_dbt_task_groups()
+  File "/opt/airflow/dags/utils/dbt_dag_parser.py", line 108, in make_dbt_task_groups
+    manifest_json = self.load_dbt_manifest()
+  File "/opt/airflow/dags/utils/dbt_dag_parser.py", line 56, in load_dbt_manifest
+    with open(manifest_path) as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/usr/local/airflow/dbt/target/manifest.json'
+[2023-08-16T21:52:34.584+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:52:34.604+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dbt_advanced_utility.py took 0.063 seconds
+[2023-08-16T21:53:05.156+0000] {processor.py:157} INFO - Started process (PID=65) to work on /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:53:05.159+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dbt_advanced_utility.py for tasks to queue
+[2023-08-16T21:53:05.165+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:53:05.164+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:53:05.197+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:53:05.193+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/dbt_advanced_utility.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dbt_advanced_utility.py", line 55, in <module>
+    dbt_target=DBT_TARGET,
+  File "/opt/airflow/dags/utils/dbt_dag_parser.py", line 46, in __init__
+    self.make_dbt_task_groups()
+  File "/opt/airflow/dags/utils/dbt_dag_parser.py", line 108, in make_dbt_task_groups
+    manifest_json = self.load_dbt_manifest()
+  File "/opt/airflow/dags/utils/dbt_dag_parser.py", line 56, in load_dbt_manifest
+    with open(manifest_path) as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/usr/local/airflow/dbt/target/manifest.json'
+[2023-08-16T21:53:05.200+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:53:05.222+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dbt_advanced_utility.py took 0.073 seconds
+[2023-08-16T21:53:35.883+0000] {processor.py:157} INFO - Started process (PID=76) to work on /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:53:35.886+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dbt_advanced_utility.py for tasks to queue
+[2023-08-16T21:53:35.888+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:53:35.888+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:53:35.933+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:53:35.927+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/dbt_advanced_utility.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dbt_advanced_utility.py", line 55, in <module>
+    dbt_target=DBT_TARGET,
+  File "/opt/airflow/dags/utils/dbt_dag_parser.py", line 46, in __init__
+    self.make_dbt_task_groups()
+  File "/opt/airflow/dags/utils/dbt_dag_parser.py", line 108, in make_dbt_task_groups
+    manifest_json = self.load_dbt_manifest()
+  File "/opt/airflow/dags/utils/dbt_dag_parser.py", line 56, in load_dbt_manifest
+    with open(manifest_path) as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/usr/local/airflow/dbt/target/manifest.json'
+[2023-08-16T21:53:35.935+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:53:35.958+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dbt_advanced_utility.py took 0.081 seconds
+[2023-08-16T21:54:06.495+0000] {processor.py:157} INFO - Started process (PID=87) to work on /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:54:06.498+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dbt_advanced_utility.py for tasks to queue
+[2023-08-16T21:54:06.501+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:54:06.501+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:54:06.559+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:54:06.554+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/dbt_advanced_utility.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dbt_advanced_utility.py", line 55, in <module>
+    dbt_target=DBT_TARGET,
+  File "/opt/airflow/dags/utils/dbt_dag_parser.py", line 46, in __init__
+    self.make_dbt_task_groups()
+  File "/opt/airflow/dags/utils/dbt_dag_parser.py", line 108, in make_dbt_task_groups
+    manifest_json = self.load_dbt_manifest()
+  File "/opt/airflow/dags/utils/dbt_dag_parser.py", line 56, in load_dbt_manifest
+    with open(manifest_path) as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/usr/local/airflow/dbt/target/manifest.json'
+[2023-08-16T21:54:06.562+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:54:06.582+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dbt_advanced_utility.py took 0.093 seconds
+[2023-08-16T21:54:37.162+0000] {processor.py:157} INFO - Started process (PID=98) to work on /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:54:37.167+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dbt_advanced_utility.py for tasks to queue
+[2023-08-16T21:54:37.169+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:54:37.168+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:54:37.210+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:54:37.205+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/dbt_advanced_utility.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dbt_advanced_utility.py", line 55, in <module>
+    dbt_target=DBT_TARGET,
+  File "/opt/airflow/dags/utils/dbt_dag_parser.py", line 46, in __init__
+    self.make_dbt_task_groups()
+  File "/opt/airflow/dags/utils/dbt_dag_parser.py", line 108, in make_dbt_task_groups
+    manifest_json = self.load_dbt_manifest()
+  File "/opt/airflow/dags/utils/dbt_dag_parser.py", line 56, in load_dbt_manifest
+    with open(manifest_path) as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/usr/local/airflow/dbt/target/manifest.json'
+[2023-08-16T21:54:37.224+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:54:37.248+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dbt_advanced_utility.py took 0.094 seconds
+[2023-08-16T21:55:07.768+0000] {processor.py:157} INFO - Started process (PID=109) to work on /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:55:07.771+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dbt_advanced_utility.py for tasks to queue
+[2023-08-16T21:55:07.773+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:55:07.773+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:55:07.798+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:55:07.795+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/dbt_advanced_utility.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dbt_advanced_utility.py", line 55, in <module>
+    dbt_target=DBT_TARGET,
+  File "/opt/airflow/dags/utils/dbt_dag_parser.py", line 46, in __init__
+    self.make_dbt_task_groups()
+  File "/opt/airflow/dags/utils/dbt_dag_parser.py", line 108, in make_dbt_task_groups
+    manifest_json = self.load_dbt_manifest()
+  File "/opt/airflow/dags/utils/dbt_dag_parser.py", line 56, in load_dbt_manifest
+    with open(manifest_path) as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/usr/local/airflow/dbt/target/manifest.json'
+[2023-08-16T21:55:07.800+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:55:07.817+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dbt_advanced_utility.py took 0.053 seconds
+[2023-08-16T21:55:38.411+0000] {processor.py:157} INFO - Started process (PID=121) to work on /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:55:38.426+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dbt_advanced_utility.py for tasks to queue
+[2023-08-16T21:55:38.431+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:55:38.430+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:55:38.476+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:55:38.471+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/dbt_advanced_utility.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dbt_advanced_utility.py", line 55, in <module>
+    dbt_target=DBT_TARGET,
+  File "/opt/airflow/dags/utils/dbt_dag_parser.py", line 46, in __init__
+    self.make_dbt_task_groups()
+  File "/opt/airflow/dags/utils/dbt_dag_parser.py", line 108, in make_dbt_task_groups
+    manifest_json = self.load_dbt_manifest()
+  File "/opt/airflow/dags/utils/dbt_dag_parser.py", line 56, in load_dbt_manifest
+    with open(manifest_path) as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/usr/local/airflow/dbt/target/manifest.json'
+[2023-08-16T21:55:38.477+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:55:38.513+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dbt_advanced_utility.py took 0.110 seconds
+[2023-08-16T21:56:09.181+0000] {processor.py:157} INFO - Started process (PID=131) to work on /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:56:09.183+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dbt_advanced_utility.py for tasks to queue
+[2023-08-16T21:56:09.185+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:56:09.185+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:56:09.219+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:56:09.214+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/dbt_advanced_utility.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dbt_advanced_utility.py", line 55, in <module>
+    dbt_target=DBT_TARGET,
+  File "/opt/airflow/dags/utils/dbt_dag_parser.py", line 46, in __init__
+    self.make_dbt_task_groups()
+  File "/opt/airflow/dags/utils/dbt_dag_parser.py", line 108, in make_dbt_task_groups
+    manifest_json = self.load_dbt_manifest()
+  File "/opt/airflow/dags/utils/dbt_dag_parser.py", line 56, in load_dbt_manifest
+    with open(manifest_path) as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/usr/local/airflow/dbt/target/manifest.json'
+[2023-08-16T21:56:09.221+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:56:09.240+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dbt_advanced_utility.py took 0.065 seconds
+[2023-08-16T21:57:15.047+0000] {processor.py:157} INFO - Started process (PID=31) to work on /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:57:15.050+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dbt_advanced_utility.py for tasks to queue
+[2023-08-16T21:57:15.051+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:57:15.051+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:57:15.110+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:57:15.110+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.customers
+[2023-08-16T21:57:15.111+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:57:15.111+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.customers
+[2023-08-16T21:57:15.112+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:57:15.112+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.orders
+[2023-08-16T21:57:15.115+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:57:15.115+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.orders
+[2023-08-16T21:57:15.117+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:57:15.116+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.stg_customers
+[2023-08-16T21:57:15.118+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:57:15.118+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.stg_customers
+[2023-08-16T21:57:15.119+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:57:15.119+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.stg_payments
+[2023-08-16T21:57:15.121+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:57:15.120+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.stg_payments
+[2023-08-16T21:57:15.123+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:57:15.123+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.stg_orders
+[2023-08-16T21:57:15.124+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:57:15.124+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.stg_orders
+[2023-08-16T21:57:15.134+0000] {processor.py:836} INFO - DAG(s) dict_keys(['dbt_advanced_dag_utility']) retrieved from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:57:15.274+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:57:15.274+0000] {manager.py:504} INFO - Created Permission View: can delete on DAG:dbt_advanced_dag_utility
+[2023-08-16T21:57:15.287+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:57:15.287+0000] {manager.py:504} INFO - Created Permission View: can read on DAG:dbt_advanced_dag_utility
+[2023-08-16T21:57:15.292+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:57:15.292+0000] {manager.py:504} INFO - Created Permission View: can edit on DAG:dbt_advanced_dag_utility
+[2023-08-16T21:57:15.310+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:57:15.310+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-08-16T21:57:15.324+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:57:15.324+0000] {dag.py:2763} INFO - Creating ORM DAG for dbt_advanced_dag_utility
+[2023-08-16T21:57:15.339+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:57:15.339+0000] {dag.py:3508} INFO - Setting next_dagrun for dbt_advanced_dag_utility to None, run_after=None
+[2023-08-16T21:57:15.358+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dbt_advanced_utility.py took 0.315 seconds
+[2023-08-16T21:57:45.768+0000] {processor.py:157} INFO - Started process (PID=42) to work on /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:57:45.770+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dbt_advanced_utility.py for tasks to queue
+[2023-08-16T21:57:45.772+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:57:45.772+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:57:45.813+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:57:45.813+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.customers
+[2023-08-16T21:57:45.816+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:57:45.816+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.customers
+[2023-08-16T21:57:45.817+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:57:45.817+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.orders
+[2023-08-16T21:57:45.822+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:57:45.822+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.orders
+[2023-08-16T21:57:45.824+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:57:45.824+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.stg_customers
+[2023-08-16T21:57:45.827+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:57:45.827+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.stg_customers
+[2023-08-16T21:57:45.830+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:57:45.830+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.stg_payments
+[2023-08-16T21:57:45.832+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:57:45.831+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.stg_payments
+[2023-08-16T21:57:45.833+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:57:45.833+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.stg_orders
+[2023-08-16T21:57:45.834+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:57:45.834+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.stg_orders
+[2023-08-16T21:57:45.841+0000] {processor.py:836} INFO - DAG(s) dict_keys(['dbt_advanced_dag_utility']) retrieved from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:57:45.918+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:57:45.917+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-08-16T21:57:45.952+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:57:45.952+0000] {dag.py:3508} INFO - Setting next_dagrun for dbt_advanced_dag_utility to None, run_after=None
+[2023-08-16T21:57:45.975+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dbt_advanced_utility.py took 0.212 seconds
+[2023-08-16T21:58:16.351+0000] {processor.py:157} INFO - Started process (PID=53) to work on /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:58:16.353+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dbt_advanced_utility.py for tasks to queue
+[2023-08-16T21:58:16.355+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:58:16.354+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:58:16.382+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:58:16.382+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.customers
+[2023-08-16T21:58:16.384+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:58:16.384+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.customers
+[2023-08-16T21:58:16.385+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:58:16.385+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.orders
+[2023-08-16T21:58:16.386+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:58:16.386+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.orders
+[2023-08-16T21:58:16.388+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:58:16.388+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.stg_customers
+[2023-08-16T21:58:16.389+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:58:16.389+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.stg_customers
+[2023-08-16T21:58:16.390+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:58:16.390+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.stg_payments
+[2023-08-16T21:58:16.391+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:58:16.391+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.stg_payments
+[2023-08-16T21:58:16.392+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:58:16.392+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.stg_orders
+[2023-08-16T21:58:16.394+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:58:16.393+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.stg_orders
+[2023-08-16T21:58:16.398+0000] {processor.py:836} INFO - DAG(s) dict_keys(['dbt_advanced_dag_utility']) retrieved from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:58:16.427+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:58:16.427+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-08-16T21:58:16.453+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:58:16.453+0000] {dag.py:3508} INFO - Setting next_dagrun for dbt_advanced_dag_utility to None, run_after=None
+[2023-08-16T21:58:16.477+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dbt_advanced_utility.py took 0.132 seconds
+[2023-08-16T21:58:46.872+0000] {processor.py:157} INFO - Started process (PID=64) to work on /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:58:46.878+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dbt_advanced_utility.py for tasks to queue
+[2023-08-16T21:58:46.879+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:58:46.879+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:58:46.918+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:58:46.918+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.customers
+[2023-08-16T21:58:46.920+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:58:46.920+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.customers
+[2023-08-16T21:58:46.921+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:58:46.921+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.orders
+[2023-08-16T21:58:46.923+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:58:46.923+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.orders
+[2023-08-16T21:58:46.925+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:58:46.924+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.stg_customers
+[2023-08-16T21:58:46.926+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:58:46.926+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.stg_customers
+[2023-08-16T21:58:46.928+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:58:46.927+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.stg_payments
+[2023-08-16T21:58:46.929+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:58:46.929+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.stg_payments
+[2023-08-16T21:58:46.930+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:58:46.930+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.stg_orders
+[2023-08-16T21:58:46.931+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:58:46.931+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.stg_orders
+[2023-08-16T21:58:46.937+0000] {processor.py:836} INFO - DAG(s) dict_keys(['dbt_advanced_dag_utility']) retrieved from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:58:46.969+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:58:46.969+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-08-16T21:58:46.991+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:58:46.990+0000] {dag.py:3508} INFO - Setting next_dagrun for dbt_advanced_dag_utility to None, run_after=None
+[2023-08-16T21:58:47.007+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dbt_advanced_utility.py took 0.146 seconds
+[2023-08-16T21:59:17.582+0000] {processor.py:157} INFO - Started process (PID=75) to work on /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:59:17.585+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dbt_advanced_utility.py for tasks to queue
+[2023-08-16T21:59:17.589+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:59:17.588+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:59:17.685+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:59:17.685+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.customers
+[2023-08-16T21:59:17.706+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:59:17.705+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.customers
+[2023-08-16T21:59:17.714+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:59:17.714+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.orders
+[2023-08-16T21:59:17.717+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:59:17.717+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.orders
+[2023-08-16T21:59:17.724+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:59:17.721+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.stg_customers
+[2023-08-16T21:59:17.751+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:59:17.747+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.stg_customers
+[2023-08-16T21:59:17.768+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:59:17.767+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.stg_payments
+[2023-08-16T21:59:17.801+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:59:17.801+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.stg_payments
+[2023-08-16T21:59:17.812+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:59:17.812+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.stg_orders
+[2023-08-16T21:59:17.814+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:59:17.814+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.stg_orders
+[2023-08-16T21:59:17.822+0000] {processor.py:836} INFO - DAG(s) dict_keys(['dbt_advanced_dag_utility']) retrieved from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:59:17.873+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:59:17.873+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-08-16T21:59:17.903+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:59:17.903+0000] {dag.py:3508} INFO - Setting next_dagrun for dbt_advanced_dag_utility to None, run_after=None
+[2023-08-16T21:59:17.919+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dbt_advanced_utility.py took 0.347 seconds
+[2023-08-16T21:59:48.403+0000] {processor.py:157} INFO - Started process (PID=86) to work on /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:59:48.405+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dbt_advanced_utility.py for tasks to queue
+[2023-08-16T21:59:48.407+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:59:48.406+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:59:48.440+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:59:48.439+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.customers
+[2023-08-16T21:59:48.441+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:59:48.441+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.customers
+[2023-08-16T21:59:48.442+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:59:48.442+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.orders
+[2023-08-16T21:59:48.443+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:59:48.443+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.orders
+[2023-08-16T21:59:48.444+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:59:48.444+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.stg_customers
+[2023-08-16T21:59:48.445+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:59:48.445+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.stg_customers
+[2023-08-16T21:59:48.446+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:59:48.446+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.stg_payments
+[2023-08-16T21:59:48.447+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:59:48.447+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.stg_payments
+[2023-08-16T21:59:48.448+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:59:48.448+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.stg_orders
+[2023-08-16T21:59:48.450+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:59:48.449+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.stg_orders
+[2023-08-16T21:59:48.456+0000] {processor.py:836} INFO - DAG(s) dict_keys(['dbt_advanced_dag_utility']) retrieved from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T21:59:48.486+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:59:48.486+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-08-16T21:59:48.507+0000] {logging_mixin.py:150} INFO - [2023-08-16T21:59:48.506+0000] {dag.py:3508} INFO - Setting next_dagrun for dbt_advanced_dag_utility to None, run_after=None
+[2023-08-16T21:59:48.520+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dbt_advanced_utility.py took 0.123 seconds
+[2023-08-16T22:00:18.957+0000] {processor.py:157} INFO - Started process (PID=97) to work on /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T22:00:18.961+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dbt_advanced_utility.py for tasks to queue
+[2023-08-16T22:00:18.965+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:00:18.965+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T22:00:18.996+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:00:18.995+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.customers
+[2023-08-16T22:00:18.997+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:00:18.997+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.customers
+[2023-08-16T22:00:18.999+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:00:18.999+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.orders
+[2023-08-16T22:00:19.000+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:00:19.000+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.orders
+[2023-08-16T22:00:19.001+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:00:19.001+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.stg_customers
+[2023-08-16T22:00:19.003+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:00:19.002+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.stg_customers
+[2023-08-16T22:00:19.004+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:00:19.004+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.stg_payments
+[2023-08-16T22:00:19.005+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:00:19.005+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.stg_payments
+[2023-08-16T22:00:19.006+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:00:19.006+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.stg_orders
+[2023-08-16T22:00:19.007+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:00:19.007+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.stg_orders
+[2023-08-16T22:00:19.012+0000] {processor.py:836} INFO - DAG(s) dict_keys(['dbt_advanced_dag_utility']) retrieved from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T22:00:19.041+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:00:19.041+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-08-16T22:00:19.060+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:00:19.060+0000] {dag.py:3508} INFO - Setting next_dagrun for dbt_advanced_dag_utility to None, run_after=None
+[2023-08-16T22:00:19.074+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dbt_advanced_utility.py took 0.123 seconds
+[2023-08-16T22:00:49.664+0000] {processor.py:157} INFO - Started process (PID=108) to work on /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T22:00:49.666+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dbt_advanced_utility.py for tasks to queue
+[2023-08-16T22:00:49.668+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:00:49.668+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T22:00:49.696+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:00:49.696+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.customers
+[2023-08-16T22:00:49.698+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:00:49.698+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.customers
+[2023-08-16T22:00:49.699+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:00:49.699+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.orders
+[2023-08-16T22:00:49.700+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:00:49.700+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.orders
+[2023-08-16T22:00:49.702+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:00:49.702+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.stg_customers
+[2023-08-16T22:00:49.703+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:00:49.703+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.stg_customers
+[2023-08-16T22:00:49.704+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:00:49.704+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.stg_payments
+[2023-08-16T22:00:49.706+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:00:49.706+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.stg_payments
+[2023-08-16T22:00:49.707+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:00:49.707+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.stg_orders
+[2023-08-16T22:00:49.708+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:00:49.708+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.stg_orders
+[2023-08-16T22:00:49.712+0000] {processor.py:836} INFO - DAG(s) dict_keys(['dbt_advanced_dag_utility']) retrieved from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T22:00:49.737+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:00:49.737+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-08-16T22:00:49.754+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:00:49.754+0000] {dag.py:3508} INFO - Setting next_dagrun for dbt_advanced_dag_utility to None, run_after=None
+[2023-08-16T22:00:49.766+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dbt_advanced_utility.py took 0.107 seconds
+[2023-08-16T22:01:20.353+0000] {processor.py:157} INFO - Started process (PID=118) to work on /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T22:01:20.356+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dbt_advanced_utility.py for tasks to queue
+[2023-08-16T22:01:20.358+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:01:20.357+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T22:01:20.389+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:01:20.389+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.customers
+[2023-08-16T22:01:20.391+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:01:20.390+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.customers
+[2023-08-16T22:01:20.392+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:01:20.392+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.orders
+[2023-08-16T22:01:20.394+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:01:20.394+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.orders
+[2023-08-16T22:01:20.395+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:01:20.395+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.stg_customers
+[2023-08-16T22:01:20.396+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:01:20.396+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.stg_customers
+[2023-08-16T22:01:20.398+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:01:20.398+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.stg_payments
+[2023-08-16T22:01:20.399+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:01:20.399+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.stg_payments
+[2023-08-16T22:01:20.401+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:01:20.401+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.stg_orders
+[2023-08-16T22:01:20.402+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:01:20.402+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.stg_orders
+[2023-08-16T22:01:20.406+0000] {processor.py:836} INFO - DAG(s) dict_keys(['dbt_advanced_dag_utility']) retrieved from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T22:01:20.442+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:01:20.442+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-08-16T22:01:20.466+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:01:20.466+0000] {dag.py:3508} INFO - Setting next_dagrun for dbt_advanced_dag_utility to None, run_after=None
+[2023-08-16T22:01:20.489+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dbt_advanced_utility.py took 0.143 seconds
+[2023-08-16T22:01:51.030+0000] {processor.py:157} INFO - Started process (PID=130) to work on /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T22:01:51.032+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dbt_advanced_utility.py for tasks to queue
+[2023-08-16T22:01:51.034+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:01:51.034+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T22:01:51.068+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:01:51.068+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.customers
+[2023-08-16T22:01:51.069+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:01:51.069+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.customers
+[2023-08-16T22:01:51.071+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:01:51.071+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.orders
+[2023-08-16T22:01:51.072+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:01:51.072+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.orders
+[2023-08-16T22:01:51.073+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:01:51.073+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.stg_customers
+[2023-08-16T22:01:51.074+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:01:51.074+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.stg_customers
+[2023-08-16T22:01:51.075+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:01:51.075+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.stg_payments
+[2023-08-16T22:01:51.077+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:01:51.077+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.stg_payments
+[2023-08-16T22:01:51.078+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:01:51.078+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.stg_orders
+[2023-08-16T22:01:51.081+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:01:51.081+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.stg_orders
+[2023-08-16T22:01:51.089+0000] {processor.py:836} INFO - DAG(s) dict_keys(['dbt_advanced_dag_utility']) retrieved from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T22:01:51.122+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:01:51.122+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-08-16T22:01:51.145+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:01:51.144+0000] {dag.py:3508} INFO - Setting next_dagrun for dbt_advanced_dag_utility to None, run_after=None
+[2023-08-16T22:01:51.162+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dbt_advanced_utility.py took 0.138 seconds
+[2023-08-16T22:02:21.776+0000] {processor.py:157} INFO - Started process (PID=142) to work on /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T22:02:21.778+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dbt_advanced_utility.py for tasks to queue
+[2023-08-16T22:02:21.781+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:02:21.781+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T22:02:21.806+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:02:21.806+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.customers
+[2023-08-16T22:02:21.808+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:02:21.807+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.customers
+[2023-08-16T22:02:21.809+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:02:21.808+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.orders
+[2023-08-16T22:02:21.809+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:02:21.809+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.orders
+[2023-08-16T22:02:21.811+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:02:21.811+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.stg_customers
+[2023-08-16T22:02:21.812+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:02:21.812+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.stg_customers
+[2023-08-16T22:02:21.814+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:02:21.814+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.stg_payments
+[2023-08-16T22:02:21.816+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:02:21.816+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.stg_payments
+[2023-08-16T22:02:21.818+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:02:21.818+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.stg_orders
+[2023-08-16T22:02:21.820+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:02:21.820+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.stg_orders
+[2023-08-16T22:02:21.825+0000] {processor.py:836} INFO - DAG(s) dict_keys(['dbt_advanced_dag_utility']) retrieved from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T22:02:21.853+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:02:21.853+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-08-16T22:02:21.875+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:02:21.875+0000] {dag.py:3508} INFO - Setting next_dagrun for dbt_advanced_dag_utility to None, run_after=None
+[2023-08-16T22:02:21.889+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dbt_advanced_utility.py took 0.117 seconds
+[2023-08-16T22:02:52.365+0000] {processor.py:157} INFO - Started process (PID=152) to work on /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T22:02:52.368+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dbt_advanced_utility.py for tasks to queue
+[2023-08-16T22:02:52.369+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:02:52.369+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T22:02:52.397+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:02:52.396+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.customers
+[2023-08-16T22:02:52.398+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:02:52.398+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.customers
+[2023-08-16T22:02:52.399+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:02:52.399+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.orders
+[2023-08-16T22:02:52.400+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:02:52.400+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.orders
+[2023-08-16T22:02:52.402+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:02:52.401+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.stg_customers
+[2023-08-16T22:02:52.403+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:02:52.403+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.stg_customers
+[2023-08-16T22:02:52.404+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:02:52.404+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.stg_payments
+[2023-08-16T22:02:52.405+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:02:52.405+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.stg_payments
+[2023-08-16T22:02:52.406+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:02:52.406+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.stg_orders
+[2023-08-16T22:02:52.407+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:02:52.407+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.stg_orders
+[2023-08-16T22:02:52.411+0000] {processor.py:836} INFO - DAG(s) dict_keys(['dbt_advanced_dag_utility']) retrieved from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T22:02:52.435+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:02:52.434+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-08-16T22:02:52.451+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:02:52.450+0000] {dag.py:3508} INFO - Setting next_dagrun for dbt_advanced_dag_utility to None, run_after=None
+[2023-08-16T22:02:52.463+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dbt_advanced_utility.py took 0.104 seconds
+[2023-08-16T22:03:23.084+0000] {processor.py:157} INFO - Started process (PID=164) to work on /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T22:03:23.086+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dbt_advanced_utility.py for tasks to queue
+[2023-08-16T22:03:23.087+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:03:23.087+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T22:03:23.118+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:03:23.117+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.customers
+[2023-08-16T22:03:23.120+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:03:23.119+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.customers
+[2023-08-16T22:03:23.121+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:03:23.121+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.orders
+[2023-08-16T22:03:23.123+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:03:23.123+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.orders
+[2023-08-16T22:03:23.124+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:03:23.124+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.stg_customers
+[2023-08-16T22:03:23.126+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:03:23.126+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.stg_customers
+[2023-08-16T22:03:23.127+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:03:23.127+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.stg_payments
+[2023-08-16T22:03:23.128+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:03:23.128+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.stg_payments
+[2023-08-16T22:03:23.129+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:03:23.129+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.stg_orders
+[2023-08-16T22:03:23.130+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:03:23.130+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.stg_orders
+[2023-08-16T22:03:23.136+0000] {processor.py:836} INFO - DAG(s) dict_keys(['dbt_advanced_dag_utility']) retrieved from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T22:03:23.165+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:03:23.164+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-08-16T22:03:23.183+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:03:23.183+0000] {dag.py:3508} INFO - Setting next_dagrun for dbt_advanced_dag_utility to None, run_after=None
+[2023-08-16T22:03:23.195+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dbt_advanced_utility.py took 0.121 seconds
+[2023-08-16T22:03:53.759+0000] {processor.py:157} INFO - Started process (PID=176) to work on /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T22:03:53.763+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dbt_advanced_utility.py for tasks to queue
+[2023-08-16T22:03:53.765+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:03:53.765+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T22:03:53.790+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:03:53.790+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.customers
+[2023-08-16T22:03:53.792+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:03:53.791+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.customers
+[2023-08-16T22:03:53.793+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:03:53.793+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.orders
+[2023-08-16T22:03:53.794+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:03:53.794+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.orders
+[2023-08-16T22:03:53.795+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:03:53.795+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.stg_customers
+[2023-08-16T22:03:53.796+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:03:53.796+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.stg_customers
+[2023-08-16T22:03:53.798+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:03:53.798+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.stg_payments
+[2023-08-16T22:03:53.802+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:03:53.801+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.stg_payments
+[2023-08-16T22:03:53.803+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:03:53.803+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.stg_orders
+[2023-08-16T22:03:53.805+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:03:53.805+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.stg_orders
+[2023-08-16T22:03:53.810+0000] {processor.py:836} INFO - DAG(s) dict_keys(['dbt_advanced_dag_utility']) retrieved from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T22:03:53.835+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:03:53.835+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-08-16T22:03:53.852+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:03:53.852+0000] {dag.py:3508} INFO - Setting next_dagrun for dbt_advanced_dag_utility to None, run_after=None
+[2023-08-16T22:03:53.865+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dbt_advanced_utility.py took 0.110 seconds
+[2023-08-16T22:04:24.449+0000] {processor.py:157} INFO - Started process (PID=186) to work on /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T22:04:24.451+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dbt_advanced_utility.py for tasks to queue
+[2023-08-16T22:04:24.453+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:04:24.453+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T22:04:24.480+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:04:24.480+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.customers
+[2023-08-16T22:04:24.481+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:04:24.481+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.customers
+[2023-08-16T22:04:24.483+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:04:24.483+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.orders
+[2023-08-16T22:04:24.484+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:04:24.484+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.orders
+[2023-08-16T22:04:24.485+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:04:24.485+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.stg_customers
+[2023-08-16T22:04:24.487+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:04:24.487+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.stg_customers
+[2023-08-16T22:04:24.488+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:04:24.488+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.stg_payments
+[2023-08-16T22:04:24.490+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:04:24.489+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.stg_payments
+[2023-08-16T22:04:24.491+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:04:24.491+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.stg_orders
+[2023-08-16T22:04:24.493+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:04:24.493+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.stg_orders
+[2023-08-16T22:04:24.497+0000] {processor.py:836} INFO - DAG(s) dict_keys(['dbt_advanced_dag_utility']) retrieved from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T22:04:24.523+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:04:24.523+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-08-16T22:04:24.540+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:04:24.540+0000] {dag.py:3508} INFO - Setting next_dagrun for dbt_advanced_dag_utility to None, run_after=None
+[2023-08-16T22:04:24.553+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dbt_advanced_utility.py took 0.109 seconds
+[2023-08-16T22:04:55.122+0000] {processor.py:157} INFO - Started process (PID=198) to work on /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T22:04:55.124+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dbt_advanced_utility.py for tasks to queue
+[2023-08-16T22:04:55.127+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:04:55.126+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T22:04:55.173+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:04:55.173+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.customers
+[2023-08-16T22:04:55.177+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:04:55.177+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.customers
+[2023-08-16T22:04:55.179+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:04:55.179+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.orders
+[2023-08-16T22:04:55.180+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:04:55.180+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.orders
+[2023-08-16T22:04:55.181+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:04:55.181+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.stg_customers
+[2023-08-16T22:04:55.184+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:04:55.183+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.stg_customers
+[2023-08-16T22:04:55.188+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:04:55.188+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.stg_payments
+[2023-08-16T22:04:55.189+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:04:55.189+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.stg_payments
+[2023-08-16T22:04:55.193+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:04:55.193+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.stg_orders
+[2023-08-16T22:04:55.194+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:04:55.194+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.stg_orders
+[2023-08-16T22:04:55.203+0000] {processor.py:836} INFO - DAG(s) dict_keys(['dbt_advanced_dag_utility']) retrieved from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T22:04:55.255+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:04:55.255+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-08-16T22:04:55.275+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:04:55.275+0000] {dag.py:3508} INFO - Setting next_dagrun for dbt_advanced_dag_utility to None, run_after=None
+[2023-08-16T22:04:55.289+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dbt_advanced_utility.py took 0.174 seconds
+[2023-08-16T22:05:25.819+0000] {processor.py:157} INFO - Started process (PID=209) to work on /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T22:05:25.821+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dbt_advanced_utility.py for tasks to queue
+[2023-08-16T22:05:25.824+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:05:25.823+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T22:05:25.848+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:05:25.847+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.customers
+[2023-08-16T22:05:25.849+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:05:25.849+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.customers
+[2023-08-16T22:05:25.850+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:05:25.850+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.orders
+[2023-08-16T22:05:25.851+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:05:25.851+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.orders
+[2023-08-16T22:05:25.852+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:05:25.852+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.stg_customers
+[2023-08-16T22:05:25.853+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:05:25.853+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.stg_customers
+[2023-08-16T22:05:25.854+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:05:25.854+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.stg_payments
+[2023-08-16T22:05:25.856+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:05:25.856+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.stg_payments
+[2023-08-16T22:05:25.857+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:05:25.857+0000] {dbt_dag_parser.py:98} INFO - Created task: model.jaffle_shop.stg_orders
+[2023-08-16T22:05:25.860+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:05:25.860+0000] {dbt_dag_parser.py:98} INFO - Created task: test.jaffle_shop.stg_orders
+[2023-08-16T22:05:25.864+0000] {processor.py:836} INFO - DAG(s) dict_keys(['dbt_advanced_dag_utility']) retrieved from /opt/airflow/dags/dbt_advanced_utility.py
+[2023-08-16T22:05:25.888+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:05:25.888+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-08-16T22:05:25.905+0000] {logging_mixin.py:150} INFO - [2023-08-16T22:05:25.905+0000] {dag.py:3508} INFO - Setting next_dagrun for dbt_advanced_dag_utility to None, run_after=None
+[2023-08-16T22:05:25.920+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dbt_advanced_utility.py took 0.107 seconds

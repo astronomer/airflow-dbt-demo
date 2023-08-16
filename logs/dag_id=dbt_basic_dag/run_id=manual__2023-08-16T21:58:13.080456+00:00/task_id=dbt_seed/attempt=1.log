@@ -1,0 +1,74 @@
+[2023-08-16T21:58:14.108+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dbt_basic_dag.dbt_seed manual__2023-08-16T21:58:13.080456+00:00 [queued]>
+[2023-08-16T21:58:14.116+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dbt_basic_dag.dbt_seed manual__2023-08-16T21:58:13.080456+00:00 [queued]>
+[2023-08-16T21:58:14.117+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 1
+[2023-08-16T21:58:14.129+0000] {taskinstance.py:1327} INFO - Executing <Task(BashOperator): dbt_seed> on 2023-08-16 21:58:13.080456+00:00
+[2023-08-16T21:58:14.138+0000] {standard_task_runner.py:57} INFO - Started process 69 to run task
+[2023-08-16T21:58:14.140+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'dbt_basic_dag', 'dbt_seed', 'manual__2023-08-16T21:58:13.080456+00:00', '--job-id', '11', '--raw', '--subdir', 'DAGS_FOLDER/dbt_basic.py', '--cfg-path', '/tmp/tmp7o4yzk8c']
+[2023-08-16T21:58:14.149+0000] {standard_task_runner.py:85} INFO - Job 11: Subtask dbt_seed
+[2023-08-16T21:58:14.202+0000] {task_command.py:410} INFO - Running <TaskInstance: dbt_basic_dag.dbt_seed manual__2023-08-16T21:58:13.080456+00:00 [running]> on host b3b7fd0df386
+[2023-08-16T21:58:14.245+0000] {abstractoperator.py:598} ERROR - Exception rendering Jinja template for task 'dbt_seed', field 'env'. Template: {'DBT_USER': '{{ conn.postgres.login }}', 'DBT_ENV_SECRET_PASSWORD': '***', 'DBT_HOST': '{{ conn.postgres.host }}', 'DBT_SCHEMA': '{{ conn.postgres.schema }}', 'DBT_PORT': '{{ conn.postgres.port }}'}
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/abstractoperator.py", line 590, in _do_render_template_fields
+    seen_oids,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/template/templater.py", line 168, in render_template
+    return {k: self.render_template(v, context, jinja_env, oids) for k, v in value.items()}
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/template/templater.py", line 168, in <dictcomp>
+    return {k: self.render_template(v, context, jinja_env, oids) for k, v in value.items()}
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/template/templater.py", line 156, in render_template
+    return self._render(template, context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/abstractoperator.py", line 540, in _render
+    return super()._render(template, context, dag=dag)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/template/templater.py", line 113, in _render
+    return render_template_to_string(template, context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/helpers.py", line 288, in render_template_to_string
+    return render_template(template, cast(MutableMapping[str, Any], context), native=False)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/helpers.py", line 283, in render_template
+    return "".join(nodes)
+  File "<template>", line 12, in root
+  File "/home/airflow/.local/lib/python3.7/site-packages/jinja2/sandbox.py", line 326, in getattr
+    value = getattr(obj, attribute)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/context.py", line 126, in __getattr__
+    self.var = Connection.get_connection_from_secrets(key)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/connection.py", line 463, in get_connection_from_secrets
+    raise AirflowNotFoundException(f"The conn_id `{conn_id}` isn't defined")
+airflow.exceptions.AirflowNotFoundException: The conn_id `postgres` isn't defined
+[2023-08-16T21:58:14.257+0000] {taskinstance.py:1824} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1407, in _run_raw_task
+    self._execute_task_with_callbacks(context, test_mode)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1531, in _execute_task_with_callbacks
+    task_orig = self.render_templates(context=context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 2179, in render_templates
+    original_task.render_template_fields(context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 1254, in render_template_fields
+    self._do_render_template_fields(self, self.template_fields, context, jinja_env, set())
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 76, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/abstractoperator.py", line 590, in _do_render_template_fields
+    seen_oids,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/template/templater.py", line 168, in render_template
+    return {k: self.render_template(v, context, jinja_env, oids) for k, v in value.items()}
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/template/templater.py", line 168, in <dictcomp>
+    return {k: self.render_template(v, context, jinja_env, oids) for k, v in value.items()}
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/template/templater.py", line 156, in render_template
+    return self._render(template, context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/abstractoperator.py", line 540, in _render
+    return super()._render(template, context, dag=dag)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/template/templater.py", line 113, in _render
+    return render_template_to_string(template, context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/helpers.py", line 288, in render_template_to_string
+    return render_template(template, cast(MutableMapping[str, Any], context), native=False)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/helpers.py", line 283, in render_template
+    return "".join(nodes)
+  File "<template>", line 12, in root
+  File "/home/airflow/.local/lib/python3.7/site-packages/jinja2/sandbox.py", line 326, in getattr
+    value = getattr(obj, attribute)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/context.py", line 126, in __getattr__
+    self.var = Connection.get_connection_from_secrets(key)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/connection.py", line 463, in get_connection_from_secrets
+    raise AirflowNotFoundException(f"The conn_id `{conn_id}` isn't defined")
+airflow.exceptions.AirflowNotFoundException: The conn_id `postgres` isn't defined
+[2023-08-16T21:58:14.265+0000] {taskinstance.py:1350} INFO - Marking task as FAILED. dag_id=dbt_basic_dag, task_id=dbt_seed, execution_date=20230816T215813, start_date=20230816T215814, end_date=20230816T215814
+[2023-08-16T21:58:14.276+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 11 for task dbt_seed (The conn_id `postgres` isn't defined; 69)
+[2023-08-16T21:58:14.319+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 1
+[2023-08-16T21:58:14.338+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

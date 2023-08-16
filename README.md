@@ -1,3 +1,11 @@
+
+# UPDATED NOTES
+using py_airflow_dbt_310
+
+
+
+
+
 # Airflow DAGs for dbt
 
 > The code in this repository is meant to accompany [this blog post](https://astronomer.io/blog/airflow-dbt-1) on
