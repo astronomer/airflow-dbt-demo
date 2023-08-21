@@ -70,6 +70,7 @@ class DbtDagParser:
 
         """
 
+        # Could separate on the task group for staged and denormalized models
         model_name = node_name.split(".")[-1]
         if dbt_verb == "test":
             node_name = node_name.replace("model", "test")  # Just a cosmetic renaming of the task
@@ -80,22 +81,36 @@ class DbtDagParser:
         dbt_task = BashOperator(
             task_id=node_name,
             task_group=task_group,
+            # TODO May need to come back to this and ensure params are correct
+            # bash_command=(
+            #     f"echo 'Running dbt {dbt_verb} for {model_name}' "
+            #     f"echo '--target {self.dbt_target} --models {model_name}' "
+            #     f"echo '--profiles-dir {self.dbt_profiles_dir} --project-dir {self.dbt_project_dir}' "
+            #     f" ========================= "
+            #     f"dbt {self.dbt_global_cli_flags} {dbt_verb} "
+            #     f"--target {self.dbt_target} --models {model_name} "
+            #     f"--profiles-dir {self.dbt_profiles_dir} --project-dir {self.dbt_project_dir}"
+            # ),
             bash_command=(
-                f"dbt {self.dbt_global_cli_flags} {dbt_verb} "
-                f"--target {self.dbt_target} --models {model_name} "
-                f"--profiles-dir {self.dbt_profiles_dir} --project-dir {self.dbt_project_dir}"
+                f"echo 'dbt run  --profiles-dir {self.dbt_profiles_dir} --select {model_name}' "
+                f" ========================= "
+                f"dbt run  --profiles-dir {self.dbt_profiles_dir} --select {model_name} "
             ),
             env={
-                "DBT_USER": "{{ conn.postgres.login }}",
-                "DBT_ENV_SECRET_PASSWORD": "{{ conn.postgres.password }}",
-                "DBT_HOST": "{{ conn.postgres.host }}",
-                "DBT_SCHEMA": "{{ conn.postgres.schema }}",
-                "DBT_PORT": "{{ conn.postgres.port }}",
+                # "DBT_USER": "{{ conn.postgres.login }}",
+                # "DBT_ENV_SECRET_PASSWORD": "{{ conn.postgres.password }}",
+                # "DBT_HOST": "{{ conn.postgres.host }}",
+                # "DBT_SCHEMA": "{{ conn.postgres.schema }}",
+                # "DBT_PORT": "{{ conn.postgres.port }}",
             },
             dag=self.dag,
         )
         # Keeping the log output, it's convenient to see when testing the python code outside of Airflow
         logging.info("Created task: %s", node_name)
+        logging.info(f"BASH COMMAND: dbt {self.dbt_global_cli_flags} {dbt_verb} ")
+        logging.info(f"BASH COMMAND: --target {self.dbt_target} --models {model_name} ")
+        logging.info(f"BASH COMMAND: --profiles-dir {self.dbt_profiles_dir} --project-dir {self.dbt_project_dir}")
+
         return dbt_task
 
     def make_dbt_task_groups(self):
@@ -117,9 +132,10 @@ class DbtDagParser:
                     # Make the run nodes
                     dbt_tasks[node_name] = self.make_dbt_task(node_name, "run")
 
+                    # Not testing at this time
                     # Make the test nodes
-                    node_test = node_name.replace("model", "test")
-                    dbt_tasks[node_test] = self.make_dbt_task(node_name, "test")
+                    # node_test = node_name.replace("model", "test")
+                    # dbt_tasks[node_test] = self.make_dbt_task(node_name, "test")
 
         # Add upstream and downstream dependencies for each run task
         for node_name in manifest_json["nodes"].keys():

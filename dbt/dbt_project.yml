@@ -1,23 +1,76 @@
-name: 'jaffle_shop'
-version: '0.1'
-profile: 'jaffle_shop'
+# This file is necessary to install dbt-utils with dbt deps
+# the content will be overwritten by the transform function
+
+# Name your package! Package names should contain only lowercase characters
+# and underscores. A good package name should reflect your organization's
+# name or the intended use of these models
+name: 'hush_sound'
+version: '1.0'
 config-version: 2
 
-source-paths: ["models"]
-analysis-paths: ["analysis"]
+# This setting configures which "profile" dbt uses for this project. Profiles contain
+# database connection information, and should be configured in the  ~/.dbt/profiles.yml file
+profile: 'normalize'
+
+# These configurations specify where dbt should look for different types of files.
+# The `source-paths` config, for example, states that source models can be found
+# in the "models/" directory. You probably won't need to change these!
+model-paths: ["models"]
+analysis-paths: ["analyses"]
 test-paths: ["tests"]
-data-paths: ["data"]
+seed-paths: ["seeds"]
 macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
 
-target-path: "target"
-clean-targets:
-    - "target"
-    - "dbt_modules"
-    - "logs"
+target-path: "target"  # directory which will store compiled SQL files
+clean-targets:         # directories to be removed by `dbt clean`
+  - "target"
 
+vars:
+  source_schema: 'default'
+
+
+quoting:
+  # database: true
+# Temporarily disabling the behavior of the ExtendedNameTransformer on table/schema names, see (issue #1785)
+# all schemas should be unquoted
+  schema: false
+  identifier: true
+
+# You can define configurations for models in the `source-paths` directory here.
+# Using these configurations, you can enable or disable models, change how they
+# are materialized, and more!
 models:
-  jaffle_shop:
-      materialized: table
-      staging:
-        materialized: view
-        +tags: "tag_staging"
+  hush_sound:
+    +file_format: 'delta'
+    # Config indicated by + and applies to all files under models/sources/
+    sources:
+      diplo:
+        staged:
+          +tags:
+           - "staged"
+          +incremental_strategy: 'merge'
+          +schema: 'staged'
+          +unique_key: 'ion_uid'
+          +materialized: 'incremental'
+          +file_format: 'delta'
+          +partition_by: "_org_name"
+    workspaces:
+      external:
+        +tags:
+          - "external"
+        +unique_key: 'ion_uid'
+        +incremental_strategy: 'merge'
+        +materialized: 'incremental'
+        +file_format: 'delta'
+        +partition_by: "_org_name"
+      customer_success:
+        +tags:
+          - "customer_success"
+        +location_root: "s3a//{{ env_var('S3_BUCKET', 'firstresonance-databricks-datalake') }}/{{ env_var('OLD_STYLE_PREFIX', '') }}thrift/{{ env_var('PIPELINE_ENV', 'stg') }}_customer_success"
+        +incremental_strategy: 'merge'
+        +schema: 'customer_success'
+        +unique_key: 'ion_uid'
+        +materialized: 'incremental'
+        +file_format: 'delta'
+        +partition_by: "_org_name"

@@ -1,12 +1,18 @@
-jaffle_shop:
+config:
+  partial_parse: true
+  printer_width: 120
+  send_anonymous_usage_stats: false
+  use_colors: true
+
+normalize:
   outputs:
-    dev:
-      type: postgres
-      threads: 1
-      host: "{{ env_var('DBT_HOST') }}"
-      port: "{{ env_var('DBT_PORT') | as_number }}"
-      user: "{{ env_var('DBT_USER') }}"
-      pass: "{{ env_var('DBT_ENV_SECRET_PASSWORD') }}"
-      dbname: postgres
-      schema: "{{ env_var('DBT_SCHEMA', 'public') }}"
-  target: dev
+
+    prod:
+      type: spark
+      method: thrift
+      threads: "{{ env_var('DBT_THREADS', 8) | as_number }}"
+      schema: "{{ env_var('PIPELINE_ENV', 'staging_pub') }}_{{ env_var('DBT_SCHEMA', 'analytics') }}"
+      host: "{{ env_var('DBT_HOST', 'localhost') }}"
+      port: 10000
+
+  target: prod

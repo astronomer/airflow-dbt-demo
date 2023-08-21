@@ -28,23 +28,23 @@ with DAG(
     doc_md=__doc__
 ) as dag:
 
-    start_dummy = DummyOperator(task_id="start")
+    start = DummyOperator(task_id="start")
     # We're using the dbt seed command here to populate the database for the purpose of this demo
-    dbt_seed = BashOperator(
-        task_id="dbt_seed",
-        bash_command=(
-            f"dbt {DBT_GLOBAL_CLI_FLAGS} seed "
-            f"--profiles-dir {DBT_PROJECT_DIR} --project-dir {DBT_PROJECT_DIR}"
-        ),
-        env={
-            "DBT_USER": "{{ conn.postgres.login }}",
-            "DBT_ENV_SECRET_PASSWORD": "{{ conn.postgres.password }}",
-            "DBT_HOST": "{{ conn.postgres.host }}",
-            "DBT_SCHEMA": "{{ conn.postgres.schema }}",
-            "DBT_PORT": "{{ conn.postgres.port }}",
-        },
-    )
-    end_dummy = DummyOperator(task_id="end")
+    # dbt_seed = BashOperator(
+    #     task_id="dbt_seed",
+    #     bash_command=(
+    #         f"dbt {DBT_GLOBAL_CLI_FLAGS} seed "
+    #         f"--profiles-dir {DBT_PROJECT_DIR} --project-dir {DBT_PROJECT_DIR}"
+    #     ),
+    #     env={
+    #         "DBT_USER": "{{ conn.postgres.login }}",
+    #         "DBT_ENV_SECRET_PASSWORD": "{{ conn.postgres.password }}",
+    #         "DBT_HOST": "{{ conn.postgres.host }}",
+    #         "DBT_SCHEMA": "{{ conn.postgres.schema }}",
+    #         "DBT_PORT": "{{ conn.postgres.port }}",
+    #     },
+    # )
+    ready = DummyOperator(task_id="end")
 
     # The parser parses out a dbt manifest.json file and dynamically creates tasks for "dbt run" and "dbt test"
     # commands for each individual model. It groups them into task groups which we can retrieve and use in the DAG.
@@ -55,6 +55,11 @@ with DAG(
         dbt_target=DBT_TARGET,
     )
     dbt_run_group = dag_parser.get_dbt_run_group()
-    dbt_test_group = dag_parser.get_dbt_test_group()
+    # dbt_test_group = dag_parser.get_dbt_test_group()
 
-    start_dummy >> dbt_seed >> dbt_run_group >> dbt_test_group >> end_dummy
+    (
+        start >>
+        dbt_run_group >>
+        #dbt_test_group >>
+        ready
+    )
