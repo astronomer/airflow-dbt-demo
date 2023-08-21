@@ -1,0 +1,122 @@
+-- use: dbt run-operation check_related_tables --args '{model_name: my_model}'
+
+-- TODO change model_name to {{ this }}
+-- Have it check for primary key instead of just assuming id
+-- Add back in is_incremental
+
+-- the macro is not running, check the model to see if there are any errors first
+
+{% macro check_related_tables(model_name) %}
+
+    {% do log(model_name, info=true) %}
+
+
+            {% set fqname = 'model.hush_sound.' ~ model_name %}
+            {% set model = graph['nodes'][fqname] %}
+
+
+            {% set relas = model['meta']['relationships'] %}
+
+            {% set combined_sql = [] %}
+            {% for rela in relas %}
+                {% for key, value in rela.items() %}
+                    {% do log('-----', info=true) %}
+
+                    
+
+{% endmacro %}
+
+-- {% set r_sql = "
+-- SELECT CONCAT(r." ~ key.split('.')[1] ~ ", '_' , r._org_name)
+-- FROM " ~ key.split('.')[0] ~ " r
+-- FULL OUTER JOIN
+-- " %}   
+-- {{ combined_sql.append(r_sql) }}
+
+-- {% if '|' in value %}
+
+--             {% set vals = value.split('|') %}
+--             {% for item in vals[1:]%}
+
+--                 {% do log(item.split('=')[0] ~ ' equals ' ~  item.split('=')[1], info=true) %}
+--                 {% set r_sql = "" %}
+
+--             {% endfor %}
+
+
+--         {% else %}
+--             {% do log(key ~ ' equals ' ~  value, info=true) %}
+--             {% if value.split('.')[1] == 'id'}
+--                 SELECT CONCAT(t.{{key.split('.')[1]}}, '_' , t._org_name) as ion_uid 
+--                 FROM {{key.split('.')[0]}} t 
+--                 WHERE t._cdc_timestamp > 
+--                     (SELECT nvl(max(_cdc_timestamp),'1970-01-01 00:00:00 UTC') 
+--                     FROM {{value.split('.')[0]}})
+--         {% endif %}
+
+--     {% endfor %}
+
+-- {% endfor %}
+
+
+-- {% set final_sql = combined_sql|join|pprint %}
+-- {% do log('final_sql: ' ~ final_sql[:-8], info=true) %}
+-- or ion_uid in ({{ final_sql[:-8] }})    
+
+=================================
+CURRENT 
+-- use: dbt run-operation check_related_tables --args '{model_name: my_model}'
+
+-- TODO change model_name to {{ this }}
+-- Have it check for primary key instead of just assuming id
+-- Add back in is_incremental
+
+-- the macro is not running, check the model to see if there are any errors first
+
+{% macro check_related_tables(model_name) %}
+
+    {% do log(model_name, info=true) %}
+
+    {% set fqname = 'model.hush_sound.' ~ model_name %}
+    {% set model = graph['nodes'][fqname] %}
+
+    {% set relas = model['meta']['relationships'] %}
+
+    {% for rela in relas %}
+        {% set vals = relas[rela] %}
+        
+        {% if rela == 'id' %}
+            {% do log('Key: ' ~ rela, info=true) %}
+            {% for val in vals %}
+                {% if '|' in val %}
+                    {% do log('multiple joins', info=true) %}
+                {% else %}
+                    {% do log('single join', info=true) %}
+                    {% set j_table = val.split('.')[0] %}
+                    {% set j_value = val.split('.')[1] %}
+                    SELECT CONCAT (rt.{{j_value}}, "_", rt._org_name)
+                    FROM {{j_table}} rt
+                    where r._cdc_timestamp >  (select nvl(max(_cdc_timestamp),"1970-01-01 00:00:00 UTC") from {{ this }})
+                {% endif %}
+                {% do log(val, info=true) %}
+                
+            {% endfor %}
+        {% endif %}
+
+    {% endfor %}
+
+{% endmacro %}
+
+-- {% do log(relas, info=true) %}
+
+
+SELECT 
+FROM purchase_order_lines_denormalized
+JOIN purchase_order_line_inventories_denormalized ON
+    purchase_order_line_inventories_denormalized.purchase_order_line_id = purchase_order_lines_denormalized.id
+JOIN 
+
+
+                    {% if i != relas[rela]|length %}
+                        UNION
+                    {% endif %}
