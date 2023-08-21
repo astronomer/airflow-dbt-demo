@@ -5,3 +5,9 @@ airflow_settings.yaml
 .idea*
 *.pyc
 */__pycache__/*
+
+logs/*
+dbt/target/compiled/*
+dbt/target/run/*
+dbt/archive/*
+dbt/logs/*
