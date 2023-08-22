@@ -8,5 +8,9 @@ apache-airflow-providers-imap
 apache-airflow-providers-sqlite
 boto3
 botocore
-dbt-core==1.6.0b2
+dbt-core
+dbt-spark
+dbt-spark[PyHive]
 pendulum==2.1.2
+PyHive
+sasl
