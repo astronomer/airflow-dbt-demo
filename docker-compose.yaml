@@ -74,7 +74,7 @@ x-airflow-common:
     _PIP_ADDITIONAL_REQUIREMENTS: ${_PIP_ADDITIONAL_REQUIREMENTS:-}
   volumes:
     - ./dags/:/opt/airflow/dags
-    - ./dbt/:/usr/local/airflow/dbt/
+    - ./dbt/:/opt/airflow/dbt/
     - ${AIRFLOW_PROJ_DIR:-.}/logs:/opt/airflow/logs
     - ${AIRFLOW_PROJ_DIR:-.}/config:/opt/airflow/config
     - ${AIRFLOW_PROJ_DIR:-.}/plugins:/opt/airflow/plugins
@@ -89,6 +89,7 @@ x-airflow-common:
 services:
   postgres:
     image: postgres:13
+    network_mode: "host"
     environment:
       POSTGRES_USER: airflow
       POSTGRES_PASSWORD: airflow
@@ -104,6 +105,7 @@ services:
 
   redis:
     image: redis:latest
+    network_mode: "host"
     expose:
       - 6379
     healthcheck:
@@ -117,6 +119,7 @@ services:
   airflow-webserver:
     <<: *airflow-common
     command: webserver
+    network_mode: "host"
     ports:
       - "8080:8080"
     healthcheck:
@@ -134,6 +137,7 @@ services:
   airflow-scheduler:
     <<: *airflow-common
     command: scheduler
+    network_mode: "host"
     healthcheck:
       test: ["CMD", "curl", "--fail", "http://localhost:8974/health"]
       interval: 30s
@@ -149,6 +153,7 @@ services:
   airflow-worker:
     <<: *airflow-common
     command: celery worker
+    network_mode: "host"
     healthcheck:
       test:
         - "CMD-SHELL"
@@ -171,6 +176,7 @@ services:
   airflow-triggerer:
     <<: *airflow-common
     command: triggerer
+    network_mode: "host"
     healthcheck:
       test: ["CMD-SHELL", 'airflow jobs check --job-type TriggererJob --hostname "$${HOSTNAME}"']
       interval: 30s
@@ -186,6 +192,7 @@ services:
   airflow-init:
     <<: *airflow-common
     entrypoint: /bin/bash
+    network_mode: "host"
     # yamllint disable rule:line-length
     command:
       - -c
@@ -265,6 +272,7 @@ services:
     <<: *airflow-common
     profiles:
       - debug
+    network_mode: "host"
     environment:
       <<: *airflow-common-env
       CONNECTION_CHECK_MAX_COUNT: "0"
@@ -280,6 +288,7 @@ services:
   flower:
     <<: *airflow-common
     command: celery flower
+    network_mode: "host"
     profiles:
       - flower
     ports:
