@@ -3,20 +3,27 @@
 > The code in this repository is meant to accompany [this blog post](https://astronomer.io/blog/airflow-dbt-1) on
 > beginner and advanced implementation concepts at the intersection of dbt and Airflow.
 
-## To run these DAGs locally:
+## To run these DAGs locally
 
 1. Download the [Astro CLI](https://github.com/astronomer/astro-cli)
 2. Download and run [Docker](https://docs.docker.com/docker-for-mac/install/)
 3. Clone this repository and `cd` into it.
 4. Run `astro dev start` to spin up a local Airflow environment and run the accompanying DAGs on your machine.
+5. Add a Postgres connection in Airflow (Admin > Connections) or via CLI:
+
+   ```bash
+   astro dev run connections add postgres --conn-type postgres --conn-host postgres --conn-schema postgres --conn-login postgres --conn-password postgres --conn-port 5432
+   ```
+
+   - **Connection Id:** `postgres` | **Host:** `postgres` | **Schema:** `postgres` | **Login:** `postgres` | **Password:** `postgres` | **Port:** `5432`
 
 ## dbt project setup
 
 We are currently using [the jaffle_shop sample dbt project](https://github.com/fishtown-analytics/jaffle_shop).
 The only files required for the Airflow DAGs to run are `dbt_project.yml`, `profiles.yml` and `target/manifest.json`, but we included the models for completeness. If you would like to try these DAGs with your own dbt workflow, feel free to drop in your own project files.
 
-
 ## Notes
+
 - To use these DAGs, Airflow 2.2+ is required. These DAGs have been tested with Airflow 2.2.0.
 - If you make changes to the dbt project, you will need to run `dbt compile` in order to update the `manifest.json` file.
 This may be done manually during development, as part of a CI/CD pipeline, or as a separate step in a production pipeline
